@@ -21,19 +21,19 @@ Dans un championnat de foot à 8 équipes, chaque équipe rencontre chacune des 
 Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant composée de 4 matchs. Le planning de ces 14 journées est donné dans le tableau suivant :
 
 
-			|   Journée    | Match n°1 | Match n°2 | Match n°3 | Match n°4 |
-			| :----------: | :-------: | :-------: | :-------: | :-------: | 
-			| Journée n°01 | E1 – E2   | E3 – E4   | E5 – E6   | E7 – E8   |
-			| Journée n°02 | E1 – E3   | E2 – E4   | E5 – E7   | E6 – E8   |
-			| Journée n°03 | E4 – E1   | E3 – E2   | E8 – E5   | E7 – E6   |
-			| Journée n°04 | E1 – E5   | E2 – E6   | E3 – E7   | E4 – E8   |
-			| Journée n°05 | E8 – E1   | E2 – E7   | E6 – E3   | E4 – E5   |
-			| Journée n°06 | E6 – E1   | E5 – E2   | E8 – E3   | E7 – E4   |
-			| Journée n°07 | E1 – E7   | E2 – E8   | E3 – E5   | E4 – E6   |
-			| Journée n°08 | E3 – E1   | E4 – E2   | E7 – E5   | E8 – E6   |
-			| Journée n°09 | E1 – E4   | E2 – E3   | E5 – E8   | E6 – E7   |
-			| Journée n°10 | E5 – E1   | E6 – E2   | E7 – E3   | E8 – E4   |
-			| Journée n°11 | E2 – E1   | E4 – E3   | E6 – E5   | E8 – E7   |
-			| Journée n°12 | E1 – E8   | E7 – E2   | E3 – E6   | E5 – E4   |
-			| Journée n°13 | E1 – E6   | E2 – E5   | E3 – E8   | E4 – E7   |
-			| Journée n°14 | E7 – E1   | E8 – E2   | E5 – E3   | E6 – E4   |
+|   Journée    | Match n°1 | Match n°2 | Match n°3 | Match n°4 |
+| :----------: | :-------: | :-------: | :-------: | :-------: | 
+| Journée n°01 | E1 – E2   | E3 – E4   | E5 – E6   | E7 – E8   |
+| Journée n°02 | E1 – E3   | E2 – E4   | E5 – E7   | E6 – E8   |
+| Journée n°03 | E4 – E1   | E3 – E2   | E8 – E5   | E7 – E6   |
+| Journée n°04 | E1 – E5   | E2 – E6   | E3 – E7   | E4 – E8   |
+| Journée n°05 | E8 – E1   | E2 – E7   | E6 – E3   | E4 – E5   |
+| Journée n°06 | E6 – E1   | E5 – E2   | E8 – E3   | E7 – E4   |
+| Journée n°07 | E1 – E7   | E2 – E8   | E3 – E5   | E4 – E6   |
+| Journée n°08 | E3 – E1   | E4 – E2   | E7 – E5   | E8 – E6   |
+| Journée n°09 | E1 – E4   | E2 – E3   | E5 – E8   | E6 – E7   |
+| Journée n°10 | E5 – E1   | E6 – E2   | E7 – E3   | E8 – E4   |
+| Journée n°11 | E2 – E1   | E4 – E3   | E6 – E5   | E8 – E7   |
+| Journée n°12 | E1 – E8   | E7 – E2   | E3 – E6   | E5 – E4   |
+| Journée n°13 | E1 – E6   | E2 – E5   | E3 – E8   | E4 – E7   |
+| Journée n°14 | E7 – E1   | E8 – E2   | E5 – E3   | E6 – E4   |

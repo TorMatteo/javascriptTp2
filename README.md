@@ -14,10 +14,14 @@ la version [pdf](ressources/TD1_dynamiser_une_page_web.pdf)
 ## INTRODUCTION
 
 Pour ce TD2, vous disposez d’une architecture web comprenant un fichier html, un fichier css et quelques autres fichiers. Installez cette architecture dans un dossier JS/TD2 de votre public_html.
+
 Dans le TD1 nous avons eu une approche fonctionnelle de JavaScript : tout notre code a été construit autour de quelques fonctions, et c’était suffisant. 
+
 Dans ce TD2, vous allez devoir construire des objets JavaScript, sans effet immédiat sur le navigateur. La console sera par contre d’une grande utilité. La touche F12 sera votre amie … 
+
 Quelques éléments de compréhension extra-JavaScript sont utiles  pour réaliser ce TD :
 Dans un championnat de foot à 8 équipes, chaque équipe rencontre chacune des sept autres équipes deux fois (match aller et match retour) : une fois sur son terrain (à domicile) et une fois sur le terrain de l’autre équipe (à l’extérieur).
+
 Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant composée de 4 matchs. Le planning de ces 14 journées est donné dans le tableau suivant :
 
 

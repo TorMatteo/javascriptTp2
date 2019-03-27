@@ -25,6 +25,14 @@ Dans un championnat de foot à 8 équipes, chaque équipe rencontre chacune des 
 Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant composée de 4 matchs. Le planning de ces 14 journées est donné dans le tableau suivant :
 
 <div align="center">
+	<table>
+		<tr><th>Journée</th><th>Match n°1</th><th>Match n°2</th><th>Match n°3</th><th>Match n°4</th></tr>
+	</table>	
+
+
+
+</div>
+
 |   Journée    | Match n°1 | Match n°2 | Match n°3 | Match n°4 |
 | :----------: | :-------: | :-------: | :-------: | :-------: | 
 | Journée n°01 | E1 – E2   | E3 – E4   | E5 – E6   | E7 – E8   |
@@ -41,7 +49,7 @@ Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant 
 | Journée n°12 | E1 – E8   | E7 – E2   | E3 – E6   | E5 – E4   |
 | Journée n°13 | E1 – E6   | E2 – E5   | E3 – E8   | E4 – E7   |
 | Journée n°14 | E7 – E1   | E8 – E2   | E5 – E3   | E6 – E4   |
-</div>
+
 Ce planning est arrangé pour qu’une équipe ne joue pas plus de 2 matchs consécutifs à domicile (idem à l’extérieur).
 
 Chaque match verra son issue déterminée par un tirage au sort :

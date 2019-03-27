@@ -76,9 +76,11 @@ Exemple de calcul d’évaluation : une équipe qui aurait cet état :
 
 21 points, 23 buts pour, 11 buts contre
 
-aura pour évaluation le nombre obtenu par le calcul
+aura pour évaluation **de base** le nombre obtenu par le calcul
 
-`21 * 10000 + (23 – 11) * 100 + 23`, ce qui donne `211223` et ce nombre donne donc la priorité aux points, puis à la différence de buts (buts marqués - buts encaissés), puis à l’attaque (buts marqués). Pour parer à l’éventualité de deux ex-aequo, on complète toujours en ajoutant un nombre aleatoire entre 0 et 1. Ainsi, il n'y aura jamais d'égalité parfaite et les équipes auront toutes un rang différent.
+`21 * 10000 + (23 – 11) * 100 + 23`, ce qui donne `211223` et ce nombre donne donc la priorité aux points, puis à la différence de buts (buts marqués - buts encaissés), puis à l’attaque (buts marqués). Pour parer à l’éventualité de deux ex-aequo, on complète toujours cette évaluation de base en y ajoutant un nombre aleatoire entre 0 et 1. Ainsi, il n'y aura jamais d'égalité parfaite et les équipes auront toutes un rang différent.
+
+Par exemple, il est possible que l'équipe précédente ait une évaluation complète égale à `211223.41526784568`.
 
 1. Complétez le constructeur donné dans le fichier `equipe.js`. Vous initialiserez l’attribut `evaluation` à une valeur donnée par `Math.random()` (nombre aléatoire entre 0 et 1).
 

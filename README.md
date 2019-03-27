@@ -279,7 +279,7 @@ d’autres variables comme tabEq et chp;
 tabEq sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
 chp prendra comme valeur un Championnat (plus tard).
 
-État initial
+### État initial
 
 1. Au début, certains éléments seront en `display : inline`, d’autres en `display :  none`. Tous ces styles sont amenés à passer d’un état à l’autre en fonctions d’événements clic divers, et ceci restera à programmer. 
 
@@ -291,26 +291,26 @@ chp prendra comme valeur un Championnat (plus tard).
 
    b) le `fieldsetE` doit être en `display : inline`.
 
-   c) Parmi les enfants du fieldsteE :
-   la <div id="equipesEngagees"> sera en display "inline".
-   la <div id="listeEquipes"> sera en display "none".
+   c) Parmi les enfants du `fieldsteE` :
+   la `<div id="equipesEngagees">` sera en `display : inline`.
+   la `<div id="listeEquipes">` sera en `display : none`.
 
-d) Dans la balise legend du fieldsetE, seule l’image « plus » est affichée, l’autre est en display "none".
+   d) Dans la balise `legend` du `fieldsetE`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
 
-e) Quand on lancera le championnat, le fieldsetC deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton "journee_suivante" soit caché, contrairement au bouton "jouer_journee". Passez donc le display de jj à "inline" et celui de js à "none".
+   e) Quand on lancera le championnat, le `fieldsetC` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee_suivante` soit caché, contrairement au bouton `jouer_journee`. Passez donc le `display` de `jj` à `inline` et celui de `js` à `none`.
 	
-2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces input avec les valeurs du tableau tabEq. Programmez ceci.
+2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabEq`. Programmez ceci.
 
-3. Enfin, pour compléter votre état initial, affectez au innerHTML de ee la valeur texte suivante :
+3. Enfin, pour compléter votre état initial, affectez au `innerHTML` de `ee` la valeur texte suivante :
 
-"équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
+		"équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
 
-Programmez tout ceci et testez en rafraîchissant la page
+   Programmez tout ceci et testez en rafraîchissant la page
 
 
-Gestion des événements click
+### Gestion des événements click
 
-4. On peut programmer la gestion d’un événement click de plusieurs façons (voir TD1). Dans notre cas, nous allons utiliser des « fonctions anonymes » :
+4. On peut programmer la gestion d’un événement `click` de plusieurs façons (voir TD1). Dans notre cas, nous allons utiliser des « fonctions anonymes » :
 
 		pl.onclick = function() {
 		  pl.style.display = "none";
@@ -319,7 +319,7 @@ Gestion des événements click
 		  ee.style.display = "none";
 		}
 	
-Dans le code précédent, on affecte à l’attribut onclick de pl une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’agir sur le display d’éléments. Un code équivalent aurait été :
+   Dans le code précédent, on affecte à l’attribut `onclick` de `pl` une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’agir sur le `display` d’éléments. Un code équivalent aurait été :
 
 		function reaction_au_clic_pl() {
 		  pl.style.display = "none";
@@ -330,73 +330,76 @@ Dans le code précédent, on affecte à l’attribut onclick de pl une valeur de
 
 		pl.onclick =  reaction_au_clic_pl ;
 
-	Mais comme cette fonction ne sert que là, on peut la passer 	en fonction anonyme sans problème.
+   Mais comme cette fonction ne sert que là, on peut la passer en fonction anonyme sans problème.
 
-Recopiez ce code, anticipez ce qui se passera quand on cliquera sur l’image plus. Actualisez la page et vérifiez que le comportement attendu se produit bien.
+   Recopiez ce code, anticipez ce qui se passera quand on cliquera sur l’image `plus`. Actualisez la page et vérifiez que le comportement attendu se produit bien.
 
-5. On va maintenant gérer le clic sur l’image moins. Adaptez le code précédent pour programmer le comportement suivant, quand on clique sur le moins :
+5. On va maintenant gérer le clic sur l’image `moins`. Adaptez le code précédent pour programmer le comportement suivant, quand on clique sur le moins :
 
-l’image « plus » doit réapparaître (display "inline") ;
-l’image « moins » doit disparaître (display "none") ;
-la <div id="listeEquipes"> doit disparaître ;
-le innerHTML de la <div id="equipesEngagees"> doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des input qui serviront ;
-cette <div id="equipesEngagees"> doit apparaître ;
+	a) l’image `plus` doit réapparaître;
 
-Programmez tout ceci, actualisez la page et vérifiez que les comportements attendus sont opérationnels.
+	b) l’image `moins` doit disparaître;
 
-6. Programmons l’action du bouton lancer_championnat.
+	c) la `<div id="listeEquipes">` doit disparaître ;
 
-Celui-ci doit :
+	d) le `innerHTML` de la `<div id="equipesEngagees">` doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des `input` qui serviront ;
 
-appeler le constructeur de Championnat, les paramètres étant huit équipes construites à partir des 8 champs texte du fieldsetE. Vous utiliserez la variable globale chp déclarée au début :
+	e) cette `<div id="equipesEngagees">` doit apparaître ;
 
-chp = new Championnat(…);
+   Programmez tout ceci, actualisez la page et vérifiez que les comportements attendus sont opérationnels.
 
-classer ces équipes ;
+6. Programmons l’action du bouton `lancer_championnat`.
 
-afficher le classement ;
+   Celui-ci doit :
 
-actualiser la balise <legend id="numJ"> pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut numJournee) ;
+	a) appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `fieldsetE`. Vous utiliserez la variable globale `chp` déclarée au début :
 
-afficher la journée correspondant à numJournee (c’est-à-dire afficher les 4 matchs) ;
+		chp = new Championnat(…);
 
-passer jj en display "inline" et js en display "none" ;
+	b) classer ces équipes ;
 
-passer fj et fc en display "inline", fe en display "none" ;
+	c) afficher le classement ;
 
-passer lc en display "none" (pour éviter les relances maladroites du championnat)
+	d) actualiser la balise `<legend id="numJ">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee` ) ;
+
+	e) afficher la journée correspondant à `numJournee` (c’est-à-dire afficher les 4 matchs) ;
+
+	f) passer `jj` en `display :  inline` et `js` en `display : none` ;
+
+	g) passer `fj` et `fc` en `display : inline`, `fe` en `display : none` ;
+
+	h) passer `lc` en `display : none` (pour éviter les relances maladroites du championnat)
 
 	Essayez de faire tout ça dans une fonction anonyme !
 
+7. Passons à l’action du bouton `jouer_journee`. Celui-ci doit :
 
-7. Passons à l’action du bouton jouer_journee. Celui-ci doit :
+	a) faire jouer la journée d’indice `numJournee` ;
 
-faire jouer la journée d’indice numJournee ;
+	b) passer `jj` en `display : none` ;
 
-passer jj en display "none" ;
+	c) si `numJournee` est inférieur à 14, passer `js` en `display : inline` (sinon, le championnat est terminé!) ;
 
-si numJournee est inférieur à 14, passer js en display "inline" (sinon, le championnat est terminé!) ;
+	d) classer les équipes ;
 
-classer les équipes ;
-
-afficher le classement.
+	e) afficher le classement.
 
 	Pareil, fonction anonyme.
 
 
-8. Et pour finir, l’action de journee_suivante. Celui-ci doit :
+8. Et pour finir, l’action de `journee_suivante`. Celui-ci doit :
 
-augmenter numJournee d’une unité ;
+	a) augmenter `numJournee` d’une unité ;
 
-afficher la journée correspondant à cette nouvelle valeur de numJournee ;
+	b) afficher la journée correspondant à cette nouvelle valeur de `numJournee` ;
 
-mettre à jour le contenu de la balise numJ ;
+	c) mettre à jour le contenu de la balise `numJ` ;
 
-passser le display de jj à "inline" et celui de js à "none".
+	d) passser `jj` en `display : inline` et `js` en `display : none`.
 
-Pareil, fonction anonyme.
+   Pareil, fonction anonyme.
 
-Actualisez tout ça, et jouez !
+   Actualisez tout ça, et jouez !
 
 
 

@@ -129,3 +129,43 @@ Par exemple, il est possible que l'équipe précédente ait une évaluation comp
 		eq1.N = 3;
 		eq1.P = 2;
 		...
+
+## EXERCICE 2 - l'objet Match
+
+Un Match aura comme attributs : 
+
+- son équipe 1 notée equ1 ;
+- son équipe 2 notée equ2 ;
+- le nombre de buts marqués par equ1, qui sera noté res1;
+- le nombre de buts marqués par equ2, qui sera noté res2;
+- un booléen played qui dit si le match a été joué ou non.
+
+
+1. Complétez le constructeur donné dans le fichier `match.js`. Vous initialiserez l’attribut `played` à `false`, puisque le match créé n’est pas encore joué. Vous initialiserez les autres attributs de manière sensée.
+
+2. Incorporez le fichier `match.js` à la suite de `equipe.js`.
+
+3. Testez votre constructeur en créant deux équipes, puis un match entre ces deux équipes. Exemple de test :
+
+   <p align="center">
+	   <img src="ressources/aff4.jpg">
+   </p>
+
+4. Codez la fonction `jouer()` qui permet de donner des valeurs à `this.res1` et à `this.res2`. En général, même s’il y a bien des exceptions, une équipe qui joue à domicile est légèrement favorisée. A vous de le mettre en œuvre. 
+
+   Remarques : 
+
++ `Math.floor(…)` renvoie la partie entière
++ `Math.floor(Math.random()*5)` donne un entier entre 0 et 4.
+
+5. Codez la fonction `maj_equipes()` qui met à jour les attributs des deux équipes du match, à partir des valeurs de `this.res1` et de `this.res2`.
+
+   Conseil : réutilisez la méthode `mise_a_jour` de `Equipe`.
+
+
+6. Codez enfin la fonction `affichage()` qui sera le `toString()` du match et qui produira quelque chose comme ça : 
+
+   <p align="center">
+	   <img src="ressources/aff5.jpg">
+   </p>
+

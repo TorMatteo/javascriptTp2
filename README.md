@@ -119,7 +119,7 @@ Par exemple, il est possible que l'équipe précédente ait une évaluation comp
 7. Testez cette nouvelle fonction à partir de `eq1` qui a certaines valeurs d’attributs suite à vos différentes manœuvres. Par exemple, pour continuer le précédent écran :
 
    <p align="center">
-	   <img src="ressources/aff2.jpg">
+	   <img src="ressources/aff3.jpg">
    </p>
 
    Remarque : il peut être utile, puisque nous rafraîchissons régulièrement la page, de sauvegarder les commandes à insérer dans la console dans un script, inséré après `equipe.js`, en bas de `championnat.html` et dont le code pourrait être :

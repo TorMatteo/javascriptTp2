@@ -27,28 +27,22 @@ Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant 
 <div align="center">
 	<table>
 		<tr><th>Journée</th><th>Match n°1</th><th>Match n°2</th><th>Match n°3</th><th>Match n°4</th></tr>
+		<tr><td>Journée n°01</td><td>E1 – E2</td><td>E3 – E4</td><td>E5 – E6</td><td>E7 – E8</td></tr>
+		<tr><td>Journée n°02</td><td>E1 – E3</td><td>E2 – E4</td><td>E5 – E7</td><td>E6 – E8</td></tr>
+		<tr><td>Journée n°03</td><td>E4 – E1</td><td>E3 – E2</td><td>E8 – E5</td><td>E7 – E6</td></tr>
+		<tr><td>Journée n°04</td><td>E1 – E5</td><td>E2 – E6</td><td>E3 – E7</td><td>E4 – E8</td></tr>
+		<tr><td>Journée n°05</td><td>E8 – E1</td><td>E2 – E7</td><td>E6 – E3</td><td>E4 – E5</td></tr>
+		<tr><td>Journée n°06</td><td>E6 – E1</td><td>E5 – E2</td><td>E8 – E3</td><td>E7 – E4</td></tr>
+		<tr><td>Journée n°07</td><td>E1 – E7</td><td>E2 – E8</td><td>E3 – E5</td><td>E4 – E6</td></tr>
+		<tr><td>Journée n°08</td><td>E3 – E1</td><td>E4 – E2</td><td>E7 – E5</td><td>E8 – E6</td></tr>
+		<tr><td>Journée n°09</td><td>E1 – E4</td><td>E2 – E3</td><td>E5 – E8</td><td>E6 – E7</td></tr>
+		<tr><td>Journée n°10</td><td>E5 – E1</td><td>E6 – E2</td><td>E7 – E3</td><td>E8 – E4</td></tr>
+		<tr><td>Journée n°11</td><td>E2 – E1</td><td>E4 – E3</td><td>E6 – E5</td><td>E8 – E7</td></tr>
+		<tr><td>Journée n°12</td><td>E1 – E8</td><td>E7 – E2</td><td>E3 – E6</td><td>E5 – E4</td></tr>
+		<tr><td>Journée n°13</td><td>E1 – E6</td><td>E2 – E5</td><td>E3 – E8</td><td>E4 – E7</td></tr>
+		<tr><td>Journée n°14</td><td>E7 – E1</td><td>E8 – E2</td><td>E5 – E3</td><td>E6 – E4</td></tr>
 	</table>	
-
-
-
 </div>
-
-|   Journée    | Match n°1 | Match n°2 | Match n°3 | Match n°4 |
-| :----------: | :-------: | :-------: | :-------: | :-------: | 
-| Journée n°01 | E1 – E2   | E3 – E4   | E5 – E6   | E7 – E8   |
-| Journée n°02 | E1 – E3   | E2 – E4   | E5 – E7   | E6 – E8   |
-| Journée n°03 | E4 – E1   | E3 – E2   | E8 – E5   | E7 – E6   |
-| Journée n°04 | E1 – E5   | E2 – E6   | E3 – E7   | E4 – E8   |
-| Journée n°05 | E8 – E1   | E2 – E7   | E6 – E3   | E4 – E5   |
-| Journée n°06 | E6 – E1   | E5 – E2   | E8 – E3   | E7 – E4   |
-| Journée n°07 | E1 – E7   | E2 – E8   | E3 – E5   | E4 – E6   |
-| Journée n°08 | E3 – E1   | E4 – E2   | E7 – E5   | E8 – E6   |
-| Journée n°09 | E1 – E4   | E2 – E3   | E5 – E8   | E6 – E7   |
-| Journée n°10 | E5 – E1   | E6 – E2   | E7 – E3   | E8 – E4   |
-| Journée n°11 | E2 – E1   | E4 – E3   | E6 – E5   | E8 – E7   |
-| Journée n°12 | E1 – E8   | E7 – E2   | E3 – E6   | E5 – E4   |
-| Journée n°13 | E1 – E6   | E2 – E5   | E3 – E8   | E4 – E7   |
-| Journée n°14 | E7 – E1   | E8 – E2   | E5 – E3   | E6 – E4   |
 
 Ce planning est arrangé pour qu’une équipe ne joue pas plus de 2 matchs consécutifs à domicile (idem à l’extérieur).
 

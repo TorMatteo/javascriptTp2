@@ -7,7 +7,7 @@
 
 Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD1, votre fork privé du TD1 (**attention, pas de fork à la main !**):
 
-https://classroom.github.com/a/1pEh7RIt
+https://classroom.github.com/a/TiyLfsDY
 
 la version [pdf](ressources/TD1_dynamiser_une_page_web.pdf)
 
@@ -26,12 +26,7 @@ Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant 
 
 
 
-<center>
-	<table>
-		<tr><th>Journée</th><th>Match n°1</th><th>Match n°2</th><th>Match n°3</th><th>Match n°4</th></tr>
-		<tr><td>Journée n°01</td><td>E1 – E2</td><td>E3 – E4</td><td>E5 – E6</td><td>E7 – E8</td></tr>
-	</table>
-</center>
+
 
 
 

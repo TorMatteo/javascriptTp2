@@ -100,7 +100,14 @@ Par exemple, il est possible que l'équipe précédente ait une évaluation comp
 
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 
-<p align="center">
-	<img src="ressources/aff.jpg">
-</p>
+   <p align="center">
+	   <img src="ressources/aff.jpg">
+   </p>
 
+   Le numéro 1 devant le nom de l’équipe est son classement.
+
+   Vous pourrez, plus tard, styliser un peu mieux cet affichage pour que les affichages des huit équipes donnent un rendu de tableau, comme ci-dessous :
+
+   <p align="center">
+	   <img src="ressources/aff2.jpg">
+   </p>

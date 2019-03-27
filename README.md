@@ -99,6 +99,4 @@ Par exemple, il est possible que l'équipe précédente ait une évaluation comp
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 
 
-<div style="text-align: center;">coucou
-	<img src="ressources/aff.jpg">
-</div>
+<p style="text-align: center;"><img src="ressources/aff.jpg"></p>

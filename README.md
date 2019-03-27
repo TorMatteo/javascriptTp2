@@ -106,8 +106,26 @@ Par exemple, il est possible que l'équipe précédente ait une évaluation comp
 
    Le numéro 1 devant le nom de l’équipe est son classement.
 
-   Vous pourrez, plus tard, styliser un peu mieux cet affichage pour que les affichages des huit équipes donnent un rendu de tableau, comme ci-dessous :
+   Pour le moment, ce n'est pas important, mais vous pourrez, **plus tard**, styliser un peu mieux cet affichage pour que les affichages des huit équipes donnent un rendu de tableau, comme ci-dessous :
 
    <p align="center">
 	   <img src="ressources/aff2.jpg">
    </p>
+
+6. Codez enfin la fonction `mise_a_jour(bp,bc)` qui met à jour le nombre de points, le nombre de buts pour et contre, le nombre de victoires, nuls et défaites, et qui actualise l’évaluation en lançant la fonction `evaluer()`. 
+
+   Remarque : les paramètres `bp` et `bc` correspondent bien sûr au résultat d’un match joué par l’équipe, où elle marque `bp` buts et en encaisse `bc`.
+
+7. Testez cette nouvelle fonction à partir de `eq1` qui a certaines valeurs d’attributs suite à vos différentes manœuvres. Par exemple, pour continuer le précédent écran :
+
+   <p align="center">
+	   <img src="ressources/aff2.jpg">
+   </p>
+
+   Remarque : il peut être utile, puisque nous rafraîchissons régulièrement la page, de sauvegarder les commandes à insérer dans la console dans un script, inséré après `equipe.js`, en bas de `championnat.html` et dont le code pourrait être :
+
+  		let eq1 = new Equipe("PSG");
+		eq1.G = 6;
+		eq1.N = 3;
+		eq1.P = 2;
+		...

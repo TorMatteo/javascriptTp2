@@ -287,17 +287,17 @@ chp prendra comme valeur un Championnat (plus tard).
 
    Programmez l’état d’affichage initial suivant :
 
-   a) les `fieldsetJ` et `fieldsetC` sont en `display : none`.
+   + les `fieldsetJ` et `fieldsetC` sont en `display : none`.
 
-   b) le `fieldsetE` doit être en `display : inline`.
+   + le `fieldsetE` doit être en `display : inline`.
 
-   c) Parmi les enfants du `fieldsteE` :
-   la `<div id="equipesEngagees">` sera en `display : inline`.
-   la `<div id="listeEquipes">` sera en `display : none`.
+   + Parmi les enfants du `fieldsteE` :
+      - la `<div id="equipesEngagees">` sera en `display : inline`.
+      - la `<div id="listeEquipes">` sera en `display : none`.
 
-   d) Dans la balise `legend` du `fieldsetE`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
+   + Dans la balise `legend` du `fieldsetE`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
 
-   e) Quand on lancera le championnat, le `fieldsetC` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee_suivante` soit caché, contrairement au bouton `jouer_journee`. Passez donc le `display` de `jj` à `inline` et celui de `js` à `none`.
+   + Quand on lancera le championnat, le `fieldsetC` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee_suivante` soit caché, contrairement au bouton `jouer_journee`. Passez donc le `display` de `jj` à `inline` et celui de `js` à `none`.
 	
 2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabEq`. Programmez ceci.
 
@@ -336,15 +336,15 @@ chp prendra comme valeur un Championnat (plus tard).
 
 5. On va maintenant gérer le clic sur l’image `moins`. Adaptez le code précédent pour programmer le comportement suivant, quand on clique sur le moins :
 
-	a) l’image `plus` doit réapparaître;
+	+ l’image `plus` doit réapparaître;
 
-	b) l’image `moins` doit disparaître;
+	+ l’image `moins` doit disparaître;
 
-	c) la `<div id="listeEquipes">` doit disparaître ;
+	+ la `<div id="listeEquipes">` doit disparaître ;
 
-	d) le `innerHTML` de la `<div id="equipesEngagees">` doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des `input` qui serviront ;
+	+ le `innerHTML` de la `<div id="equipesEngagees">` doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des `input` qui serviront ;
 
-	e) cette `<div id="equipesEngagees">` doit apparaître ;
+	+ cette `<div id="equipesEngagees">` doit apparaître ;
 
    Programmez tout ceci, actualisez la page et vérifiez que les comportements attendus sont opérationnels.
 
@@ -352,50 +352,50 @@ chp prendra comme valeur un Championnat (plus tard).
 
    Celui-ci doit :
 
-	a) appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `fieldsetE`. Vous utiliserez la variable globale `chp` déclarée au début :
+	+ appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `fieldsetE`. Vous utiliserez la variable globale `chp` déclarée au début :
 
 		chp = new Championnat(…);
 
-	b) classer ces équipes ;
+	+ classer ces équipes ;
 
-	c) afficher le classement ;
+	+ afficher le classement ;
 
-	d) actualiser la balise `<legend id="numJ">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee` ) ;
+	+ actualiser la balise `<legend id="numJ">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee` ) ;
 
-	e) afficher la journée correspondant à `numJournee` (c’est-à-dire afficher les 4 matchs) ;
+	+ afficher la journée correspondant à `numJournee` (c’est-à-dire afficher les 4 matchs) ;
 
-	f) passer `jj` en `display :  inline` et `js` en `display : none` ;
+	+ passer `jj` en `display :  inline` et `js` en `display : none` ;
 
-	g) passer `fj` et `fc` en `display : inline`, `fe` en `display : none` ;
+	+ passer `fj` et `fc` en `display : inline`, `fe` en `display : none` ;
 
-	h) passer `lc` en `display : none` (pour éviter les relances maladroites du championnat)
+	+ passer `lc` en `display : none` (pour éviter les relances maladroites du championnat)
 
 	Essayez de faire tout ça dans une fonction anonyme !
 
 7. Passons à l’action du bouton `jouer_journee`. Celui-ci doit :
 
-	a) faire jouer la journée d’indice `numJournee` ;
+	+ faire jouer la journée d’indice `numJournee` ;
 
-	b) passer `jj` en `display : none` ;
+	+ passer `jj` en `display : none` ;
 
-	c) si `numJournee` est inférieur à 14, passer `js` en `display : inline` (sinon, le championnat est terminé!) ;
+	+ si `numJournee` est inférieur à 14, passer `js` en `display : inline` (sinon, le championnat est terminé!) ;
 
-	d) classer les équipes ;
+	+ classer les équipes ;
 
-	e) afficher le classement.
+	+ afficher le classement.
 
 	Pareil, fonction anonyme.
 
 
 8. Et pour finir, l’action de `journee_suivante`. Celui-ci doit :
 
-	a) augmenter `numJournee` d’une unité ;
+	+ augmenter `numJournee` d’une unité ;
 
-	b) afficher la journée correspondant à cette nouvelle valeur de `numJournee` ;
+	+ afficher la journée correspondant à cette nouvelle valeur de `numJournee` ;
 
-	c) mettre à jour le contenu de la balise `numJ` ;
+	+ mettre à jour le contenu de la balise `numJ` ;
 
-	d) passser `jj` en `display : inline` et `js` en `display : none`.
+	+ passser `jj` en `display : inline` et `js` en `display : none`.
 
    Pareil, fonction anonyme.
 

@@ -354,7 +354,7 @@ chp prendra comme valeur un Championnat (plus tard).
 
 	+ appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `fieldsetE`. Vous utiliserez la variable globale `chp` déclarée au début :
 
-		`chp = new Championnat(…);`
+		chp = new Championnat(…);
 
 	+ classer ces équipes ;
 

@@ -9,11 +9,11 @@ Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD2, v
 
 https://classroom.github.com/a/TiyLfsDY
 
-la version [pdf](ressources/TD1_dynamiser_une_page_web.pdf)
+la version [pdf](ressources/td2.pdf)
 
 ## INTRODUCTION
 
-Pour ce TD2, vous disposez d’une architecture web comprenant un fichier html, un fichier css et quelques autres fichiers. Installez cette architecture dans un dossier JS/TD2 de votre public_html.
+Pour ce TD2, vous disposez d’une architecture web comprenant un fichier html, un fichier css et quelques autres fichiers. Clonez cette architecture dans un dossier JS/TD2 de votre public_html.
 
 Dans le TD1 nous avons eu une approche fonctionnelle de JavaScript : tout notre code a été construit autour de quelques fonctions, et c’était suffisant. 
 
@@ -241,15 +241,15 @@ Une Journee aura comme attributs :
 6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer après tous les fichiers, et qui peut vous aider :
 
 		<script type="text/javascript">
-	       var eq1 = new Equipe("PSG");
-	       var eq2 = new Equipe("FCN");
-	       var eq3 = new Equipe("ASM");
-	       var eq4 = new Equipe("RCS");
-	       var eq5 = new Equipe("HAC");
-	       var eq6 = new Equipe("RCL");
-	       var eq7 = new Equipe("TFC");
-	       var eq8 = new Equipe("EAG");
-	       var chp = new Championnat(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8);
+	       let eq1 = new Equipe("PSG");
+	       let eq2 = new Equipe("FCN");
+	       let eq3 = new Equipe("ASM");
+	       let eq4 = new Equipe("RCS");
+	       let eq5 = new Equipe("HAC");
+	       let eq6 = new Equipe("RCL");
+	       let eq7 = new Equipe("TFC");
+	       let eq8 = new Equipe("EAG");
+	       let chp = new Championnat(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8);
 	    </script>
 
 	Entrez ensuite dans la console les instructions suivantes :

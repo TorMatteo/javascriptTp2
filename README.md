@@ -203,7 +203,7 @@ Une Journee aura comme attributs :
 
 1. Le constructeur de Championnat vous est fourni. Un objet Championnat a trois attributs : 
 - un tableau d’équipes nommé  `tabEquipes` ;
-- en entier `numJournee` qui dit quelle est la journée active ;
+- un entier `numJournee` qui dit quelle est la journée active ;
 - un tableau `journees` contenant les 14 journées du planning.
 
    Analysez ce code et comprenez ce qui est fait. Vous remarquerez en particulier les méthodes sur les tableaux. N’oubliez pas d’insérer le fichier `championnat.js`.
@@ -305,7 +305,7 @@ chp prendra comme valeur un Championnat (plus tard).
 
 		"équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
 
-   Programmez tout ceci et testez en rafraîchissant la page
+   Programmez tout ceci et testez en rafraîchissant la page.
 
 
 ### Gestion des événements click

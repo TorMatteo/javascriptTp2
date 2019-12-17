@@ -136,8 +136,8 @@ Un Match aura comme attributs :
 
 - son équipe 1 notée `eq1` ;
 - son équipe 2 notée `eq2` ;
-- le nombre de buts marqués par equ1, qui sera noté `res1`;
-- le nombre de buts marqués par equ2, qui sera noté `res2`;
+- le nombre de buts marqués par eq1, qui sera noté `res1`;
+- le nombre de buts marqués par eq2, qui sera noté `res2`;
 - un booléen `played` qui dit si le match a été joué ou non.
 
 

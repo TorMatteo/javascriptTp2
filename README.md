@@ -134,8 +134,8 @@ Par exemple, il est possible que l'équipe précédente ait une évaluation comp
 
 Un Match aura comme attributs : 
 
-- son équipe 1 notée `equ1` ;
-- son équipe 2 notée `equ2` ;
+- son équipe 1 notée `eq1` ;
+- son équipe 2 notée `eq2` ;
 - le nombre de buts marqués par equ1, qui sera noté `res1`;
 - le nombre de buts marqués par equ2, qui sera noté `res2`;
 - un booléen `played` qui dit si le match a été joué ou non.

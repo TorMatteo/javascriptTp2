@@ -1,8 +1,8 @@
 class Championnat {
 
 	constructor(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8) {
-		this.tabEqipes = new Array();
-		this.tabEqipes.push(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8);
+		this.tabEquipes = new Array();
+		this.tabEquipes.push(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8);
 		this.numJournee = 1;
 		this.journees = new Array();
 		this.journees.push(new Journee(new Match(eq1,eq2),new Match(eq3,eq4),new Match(eq5,eq6),new Match(eq7,eq8))); // journée 01

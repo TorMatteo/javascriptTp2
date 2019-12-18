@@ -1,24 +1,24 @@
 class Championnat {
 
-	constructor(equ1,equ2,equ3,equ4,equ5,equ6,equ7,equ8) {
-		this.tabEquipes = new Array();
-		this.tabEquipes.push(equ1,equ2,equ3,equ4,equ5,equ6,equ7,equ8);
+	constructor(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8) {
+		this.tabEqipes = new Array();
+		this.tabEqipes.push(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8);
 		this.numJournee = 1;
 		this.journees = new Array();
-		this.journees.push(new Journee(new Match(equ1,equ2),new Match(equ3,equ4),new Match(equ5,equ6),new Match(equ7,equ8))); // journée 01
-		this.journees.push(new Journee(new Match(equ1,equ3),new Match(equ2,equ4),new Match(equ5,equ7),new Match(equ6,equ8))); // journée 02
-		this.journees.push(new Journee(new Match(equ4,equ1),new Match(equ3,equ2),new Match(equ8,equ5),new Match(equ7,equ6))); // journée 03
-		this.journees.push(new Journee(new Match(equ1,equ5),new Match(equ2,equ6),new Match(equ3,equ7),new Match(equ4,equ8))); // journée 04
-		this.journees.push(new Journee(new Match(equ8,equ1),new Match(equ2,equ7),new Match(equ6,equ3),new Match(equ4,equ5))); // journée 05
-		this.journees.push(new Journee(new Match(equ6,equ1),new Match(equ5,equ2),new Match(equ8,equ3),new Match(equ7,equ4))); // journée 06
-		this.journees.push(new Journee(new Match(equ1,equ7),new Match(equ2,equ8),new Match(equ3,equ5),new Match(equ4,equ6))); // journée 07
-		this.journees.push(new Journee(new Match(equ3,equ1),new Match(equ4,equ2),new Match(equ7,equ5),new Match(equ8,equ6))); // journée 08
-		this.journees.push(new Journee(new Match(equ1,equ4),new Match(equ2,equ3),new Match(equ5,equ8),new Match(equ6,equ7))); // journée 09
-		this.journees.push(new Journee(new Match(equ5,equ1),new Match(equ6,equ2),new Match(equ7,equ3),new Match(equ8,equ4))); // journée 10
-		this.journees.push(new Journee(new Match(equ2,equ1),new Match(equ4,equ3),new Match(equ6,equ5),new Match(equ8,equ7))); // journée 11
-		this.journees.push(new Journee(new Match(equ1,equ8),new Match(equ7,equ2),new Match(equ3,equ6),new Match(equ5,equ4))); // journée 12
-		this.journees.push(new Journee(new Match(equ1,equ6),new Match(equ2,equ5),new Match(equ3,equ8),new Match(equ4,equ7))); // journée 13
-		this.journees.push(new Journee(new Match(equ7,equ1),new Match(equ8,equ2),new Match(equ5,equ3),new Match(equ6,equ4))); // journée 14
+		this.journees.push(new Journee(new Match(eq1,eq2),new Match(eq3,eq4),new Match(eq5,eq6),new Match(eq7,eq8))); // journée 01
+		this.journees.push(new Journee(new Match(eq1,eq3),new Match(eq2,eq4),new Match(eq5,eq7),new Match(eq6,eq8))); // journée 02
+		this.journees.push(new Journee(new Match(eq4,eq1),new Match(eq3,eq2),new Match(eq8,eq5),new Match(eq7,eq6))); // journée 03
+		this.journees.push(new Journee(new Match(eq1,eq5),new Match(eq2,eq6),new Match(eq3,eq7),new Match(eq4,eq8))); // journée 04
+		this.journees.push(new Journee(new Match(eq8,eq1),new Match(eq2,eq7),new Match(eq6,eq3),new Match(eq4,eq5))); // journée 05
+		this.journees.push(new Journee(new Match(eq6,eq1),new Match(eq5,eq2),new Match(eq8,eq3),new Match(eq7,eq4))); // journée 06
+		this.journees.push(new Journee(new Match(eq1,eq7),new Match(eq2,eq8),new Match(eq3,eq5),new Match(eq4,eq6))); // journée 07
+		this.journees.push(new Journee(new Match(eq3,eq1),new Match(eq4,eq2),new Match(eq7,eq5),new Match(eq8,eq6))); // journée 08
+		this.journees.push(new Journee(new Match(eq1,eq4),new Match(eq2,eq3),new Match(eq5,eq8),new Match(eq6,eq7))); // journée 09
+		this.journees.push(new Journee(new Match(eq5,eq1),new Match(eq6,eq2),new Match(eq7,eq3),new Match(eq8,eq4))); // journée 10
+		this.journees.push(new Journee(new Match(eq2,eq1),new Match(eq4,eq3),new Match(eq6,eq5),new Match(eq8,eq7))); // journée 11
+		this.journees.push(new Journee(new Match(eq1,eq8),new Match(eq7,eq2),new Match(eq3,eq6),new Match(eq5,eq4))); // journée 12
+		this.journees.push(new Journee(new Match(eq1,eq6),new Match(eq2,eq5),new Match(eq3,eq8),new Match(eq4,eq7))); // journée 13
+		this.journees.push(new Journee(new Match(eq7,eq1),new Match(eq8,eq2),new Match(eq5,eq3),new Match(eq6,eq4))); // journée 14
 	}
 
 	jouer_journee(i) {
@@ -33,7 +33,7 @@ class Championnat {
 		// à compléter
 	}
 
-	classer_equipes() {
+	classer_eqipes() {
 		// à compléter
 	}
 

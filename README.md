@@ -272,7 +272,7 @@ Une Journee aura comme attributs :
 
 ## EXERCICE 5 - le scénario
 
-Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les instructions tests utilisées précédemment (voir haut de cette page). Incluez le fichier scenario.js à la suite des 4 autres fichiers. Ce fichier sera une suite d’instructions. Pour le moment, il contient des déclarations de variables :
+Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les instructions tests utilisées précédemment. Incluez le fichier scenario.js à la suite des 4 autres fichiers. Ce fichier sera une suite d’instructions. Pour le moment, il contient des déclarations de variables :
 
 des variables qui font le lien avec l’interface html ;
 d’autres variables comme tabEq et chp;

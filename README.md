@@ -274,10 +274,13 @@ Une Journee aura comme attributs :
 
 Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les instructions tests utilisées précédemment. Incluez le fichier scenario.js à la suite des 4 autres fichiers. Ce fichier sera une suite d’instructions. Pour le moment, il contient des déclarations de variables :
 
-des variables qui font le lien avec l’interface html ;
-d’autres variables comme tabEq et chp;
-tabEq sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
-chp prendra comme valeur un Championnat (plus tard).
++ des variables qui font le lien avec l’interface html ;
+
++ d’autres variables comme tabEq et chp;
+
+	- tabEq sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
+
+	- chp prendra comme valeur un Championnat (plus tard).
 
 ### État initial
 

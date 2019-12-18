@@ -1,20 +1,20 @@
 // variables correspondant à des balises importantes
-var le = document.getElementById('listeEquipes');
-var ee = document.getElementById('equipesEngagees');
-var lc = document.getElementById('lancer_championnat');
-var js = document.getElementById('journee_suivante');
-var jj = document.getElementById('jouer_journee');
-var fe = document.getElementById('fieldsetE');
-var fj = document.getElementById('fieldsetJ');
-var fc = document.getElementById('fieldsetC');
-var pl = document.getElementById('plus');
-var mo = document.getElementById('moins');
+let le = document.getElementById('listeEquipes');
+let ee = document.getElementById('equipesEngagees');
+let lc = document.getElementById('lancer_championnat');
+let js = document.getElementById('journee_suivante');
+let jj = document.getElementById('jouer_journee');
+let fe = document.getElementById('fieldsetE');
+let fj = document.getElementById('fieldsetJ');
+let fc = document.getElementById('fieldsetC');
+let pl = document.getElementById('plus');
+let mo = document.getElementById('moins');
 
 // la variable tableau des équipes par défaut
-var tabEq = ["PSG","ASM","OM","ASSE","OL","FCN","EAG","RCS"];
+let tabEq = ["PSG","ASM","OM","ASSE","OL","FCN","EAG","RCS"];
 
 // la variable Championnat
-var chp;
+let chp;
 
 // les styles d'affichages initiaux
 

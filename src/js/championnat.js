@@ -33,7 +33,7 @@ class Championnat {
 		// à compléter
 	}
 
-	classer_eqipes() {
+	classer_equipes() {
 		// à compléter
 	}
 

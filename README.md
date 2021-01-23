@@ -69,7 +69,7 @@ Une Equipe aura comme attributs :
 - son nombre de points ;
 - son nombre de matchs gagnés (pour enrichir l’affichage) ;
 - son nombre de matchs nuls (idem) ;
-- son nombre de match perdus (idem) ;
+- son nombre de matchs perdus (idem) ;
 - son nombre de buts pour (les buts marqués) ;
 - son nombre de buts contre (les buts encaissés) ;
 - son « évaluation » qui permettra de définir son classement.

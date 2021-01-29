@@ -83,11 +83,13 @@ Une Equipe aura comme attributs :
 
 3. actualisez la page `championnat.html` et testez le constructeur dans la console, par exemple en créant une nouvelle équipe par une instruction comme 
 
-		let eq1 = new Equipe("PSG"); 
+		const eq1 = new Equipe("PSG"); 
 
    puis affichez `eq1` dans la console (`eq1` et `Entrée`). Vous pouvez « déplier » l’objet créé et examiner ce qui s’affiche. 
 
-4. Codez la fonction `evaluer()` comme c’est suggéré en page précédente. Testez cette fonction en changeant « à la main » les valeurs de certains attributs de `eq1` (dans la console) et lancez l’exécution de `eq1.evaluer()` dans la console également. Réaffichez `eq1` pour voir le résultat.
+4. Codez la fonction `estDevant(autreEquipe)` qui renvoie `true` si l'équipe `this` est meilleure au classement que l'équipe `autreEquipe` passée en argument et `false` sinon. Cette fonction doit commencer par essayer de comparer les équipes selon leur nombre de points au classement, puis selon leur différence de buts en cas d'égalité au score, puis selon le nombre de buts marqués en cas d'égalité sur la différence de buts puis finalement selon leur valeur aléatoire en cas d'égalité de tous les autres critères.
+
+    Testez cette fonction en créant plusieurs équipes et en modifiant « à la main » les valeurs de leurs attributs (dans la console).
 
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 

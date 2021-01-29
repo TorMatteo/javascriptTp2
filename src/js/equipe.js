@@ -4,7 +4,7 @@ class Equipe {
 		// à compléter
 	}
 
-	evaluer() {
+	estDevant(autreEquipe) {
 		// à compléter
 	}
 

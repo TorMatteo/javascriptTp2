@@ -77,11 +77,9 @@ Une Equipe aura comme attributs :
 
 1. Complétez le constructeur donné dans le fichier `equipe.js` (vous pouvez utiliser la fonction `Math.random()` pour générer un nombre aléatoire entre 0 et 1).
 
-1. Complétez le constructeur donné dans le fichier `equipe.js`. Vous initialiserez l’attribut `evaluation` à une valeur donnée par `Math.random()` (nombre aléatoire entre 0 et 1).
+2. Ajoutez le script `equipe.js` au fichier `championnat.html` en ajoutant la ligne suivante dans la balise `<head>` : 
 
-2. Incorporez le fichier `equipe.js` avant `</body>` par 
-
-		<script type="text/javascript" src="js/equipe.js"></script>
+		<script defer type="text/javascript" src="js/equipe.js"></script>
 
 3. actualisez la page `championnat.html` et testez le constructeur dans la console, par exemple en créant une nouvelle équipe par une instruction comme 
 

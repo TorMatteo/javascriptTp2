@@ -230,23 +230,23 @@ Une Journee aura comme attributs :
 	       let eq6 = new Equipe("RCL");
 	       let eq7 = new Equipe("TFC");
 	       let eq8 = new Equipe("EAG");
-	       let chp = new Championnat(eq1,eq2,eq3,eq4,eq5,eq6,eq7,eq8);
+	       let chp = new Championnat(eq1, eq2, eq3, eq4, eq5, eq6, eq7, eq8);
 	    </script>
 
 	Entrez ensuite dans la console les instructions suivantes :
 
-		chp.classer_equipes();
-		chp.afficher_classement();
-		chp.afficher_journee(1);
-		chp.jouer_journee(1);
-		chp.classer_equipes();
-		chp.afficher_classement();
-		chp.afficher_journee(2);
-		chp.jouer_journee(2);
-		chp.classer_equipes();
-		chp.afficher_classement();
-
-	etc
+		chp.classerEquipes();
+		chp.afficherClassement();
+		chp.afficherJournee(1);
+		chp.jouerJournee(1);
+		chp.classerEquipes();
+		chp.afficherClassement();
+		chp.afficherJournee(2);
+		chp.jouerJournee(2);
+		chp.classerEquipes();
+		chp.afficherClassement();
+	
+	etc.
 
 7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.  
 

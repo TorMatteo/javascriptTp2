@@ -187,7 +187,7 @@ Une Journee aura comme attributs :
 - joue les 4 matchs de la journée ;
 - affiche la journée par la méthode précédente ;
 - passe le booléen played à `true` ;
-- met à jour chaque équipe grâce à la fonction `maj_equipes()`.
+- met à jour chaque équipe grâce à la fonction `majEquipes()`.
 
 7. Testez cette fonction en la lançant dans la console après avoir testé votre question 5. Vous devez constater l’affichage des nouveaux scores.
 

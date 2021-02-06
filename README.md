@@ -168,10 +168,10 @@ Une Journee aura comme attributs :
 - son match n°2 noté `match2`;
 - son match n°3 noté `match3`;
 - son match n°4 noté `match4`;
-- un booléen `played` qui dit si la journée a été jouée ou non.
+- un booléen `estJouee` qui dit si la journée a été jouée ou non.
 
 
-1. Complétez le constructeur donné dans le fichier `journee.js`. Vous initialiserez l’attribut `played` à `false`.
+1. Complétez le constructeur donné dans le fichier `journee.js`. Vous initialiserez l’attribut `estJouee` à `false`.
 
 2. Incorporez le fichier `journee.js` à la suite de `match.js`.
 

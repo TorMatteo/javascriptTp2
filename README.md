@@ -94,7 +94,7 @@ Une Equipe aura comme attributs :
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 
    <p align="center">
-	   <img src="ressources/aff.jpg">
+	   <img src="ressources/aff.png">
    </p>
 
    Le numéro 1 devant le nom de l’équipe est son classement.
@@ -110,7 +110,7 @@ Une Equipe aura comme attributs :
 7. Testez cette nouvelle fonction à partir de `eq1` qui a certaines valeurs d’attributs suite à vos différentes manœuvres. Par exemple, pour continuer le précédent écran :
 
    <p align="center">
-	   <img src="ressources/aff3.jpg">
+	   <img src="ressources/aff3.png">
    </p>
 
    Remarque : il peut être utile, puisque nous rafraîchissons régulièrement la page, de sauvegarder les commandes à insérer dans la console dans un script, inséré après `equipe.js`, en bas de `championnat.html` et dont le code pourrait être :
@@ -139,7 +139,7 @@ Un Match aura comme attributs :
 3. Testez votre constructeur en créant deux équipes, puis un match entre ces deux équipes. Exemple de test :
 
    <p align="center">
-	   <img src="ressources/aff4.jpg">
+	   <img src="ressources/aff4.png">
    </p>
 
 4. Codez la fonction `jouer()` qui permet de donner des valeurs à `this.nbButs1` et à `this.nbButs2`. En général, même s’il y a bien des exceptions, une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre. 
@@ -157,7 +157,7 @@ Un Match aura comme attributs :
 6. Codez enfin la fonction `affichage()` qui sera le `toString()` du match et qui produira quelque chose comme ça : 
 
    <p align="center">
-	   <img src="ressources/aff5.jpg">
+	   <img src="ressources/aff5.png">
    </p>
 
 ## EXERCICE 3 - l'objet Journee

@@ -1,12 +1,12 @@
 // variables correspondant à des balises importantes
-const listeEquipes = document.getElementById('listeEquipes');
-const equipesEngagees = document.getElementById('equipesEngagees');
-const boutonLancer = document.getElementById('lancer_championnat');
-const boutonJourneeSuivante = document.getElementById('journee_suivante');
-const boutonJouerJournee = document.getElementById('jouer_journee');
-const blocEquipes = document.getElementById('fieldsetE');
-const blocJournee = document.getElementById('fieldsetJ');
-const blocClassement = document.getElementById('fieldsetC');
+const listeEquipes = document.getElementById('liste-equipes');
+const equipesEngagees = document.getElementById('equipes-engagees');
+const boutonLancer = document.getElementById('lancer-championnat');
+const boutonJourneeSuivante = document.getElementById('journee-suivante');
+const boutonJouerJournee = document.getElementById('jouer-journee');
+const blocEquipes = document.getElementById('bloc-equipes');
+const blocJournee = document.getElementById('bloc-journee');
+const blocClassement = document.getElementById('bloc-classement');
 const boutonPlus = document.getElementById('plus');
 const boutonMoins = document.getElementById('moins');
 

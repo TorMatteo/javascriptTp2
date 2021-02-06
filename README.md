@@ -291,7 +291,7 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
 3. Enfin, pour compléter votre état initial, affectez au `innerHTML` de `equipesEngagees` la valeur texte suivante :
 
-		"équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
+		"Équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
 
    Programmez tout ceci et testez en rafraîchissant la page.
 
@@ -299,24 +299,24 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 ### Gestion des événements click
 
 4. On peut programmer la gestion d’un événement `click` de plusieurs façons (voir TD1). Dans notre cas, nous allons utiliser des « fonctions anonymes » :
-
-		pl.onclick = function() {
-		  pl.style.display = "none";
-		  mo.style.display = "inline";
-		  le.style.display = "inline";
-		  ee.style.display = "none";
-		}
+           
+        boutonPlus.onclick = function () {
+            boutonPlus.style.display = "none";
+            boutonMoins.style.display = "inline";
+            listeEquipes.style.display = "inline";
+            equipesEngagees.style.display = "none";
+        };
 	
-   Dans le code précédent, on affecte à l’attribut `onclick` de `pl` une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’agir sur le `display` d’éléments. Un code équivalent aurait été :
+   Dans le code précédent, on affecte à l’attribut `onclick` de `boutonPlus` une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’agir sur le `display` d’éléments. Un code équivalent aurait été :
 
-		function reaction_au_clic_pl() {
-		  pl.style.display = "none";
-		  mo.style.display = "inline";
-		  le.style.display = "inline";
-		  ee.style.display = "none";
+		function reactionAuClicPlus() {
+            boutonPlus.style.display = "none";
+            boutonMoins.style.display = "inline";
+            listeEquipes.style.display = "inline";
+            equipesEngagees.style.display = "none";
 		}
 
-		pl.onclick =  reaction_au_clic_pl ;
+		boutonPlus.onclick = reactionAuClicPlus ;
 
    Mais comme cette fonction ne sert que là, on peut la passer en fonction anonyme sans problème.
 
@@ -328,19 +328,19 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
 	+ l’image `moins` doit disparaître;
 
-	+ la `<div id="listeEquipes">` doit disparaître ;
+	+ la `<div id="liste-equipes">` doit disparaître ;
 
-	+ le `innerHTML` de la `<div id="equipesEngagees">` doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des `input` qui serviront ;
+	+ le `innerHTML` de la `<div id="equipes-engagees">` doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des `input` qui serviront ;
 
-	+ cette `<div id="equipesEngagees">` doit apparaître ;
+	+ cette `<div id="equipes-engagees">` doit apparaître ;
 
    Programmez tout ceci, actualisez la page et vérifiez que les comportements attendus sont opérationnels.
 
-6. Programmons l’action du bouton `lancer_championnat`.
+6. Programmons l’action du bouton `lancer-championnat`.
 
    Celui-ci doit :
 
-	+ appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `fieldsetE`. Vous utiliserez la variable globale `chp` déclarée au début :
+	+ appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `bloc-equipes`. Vous utiliserez la variable globale `chp` déclarée au début :
 
 		chp = new Championnat(…);
 
@@ -348,25 +348,25 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
 	+ afficher le classement ;
 
-	+ actualiser la balise `<legend id="numJ">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee` ) ;
+	+ actualiser la balise `<legend id="num-journee">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee`) ;
 
 	+ afficher la journée correspondant à `numJournee` (c’est-à-dire afficher les 4 matchs) ;
 
-	+ passer `jj` en `display :  inline` et `js` en `display : none` ;
+	+ passer `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none` ;
 
-	+ passer `fj` et `fc` en `display : inline`, `fe` en `display : none` ;
+	+ passer `blocJournee` et `blocClassement` en `display : inline`, `bloc-Equipes` en `display : none` ;
 
-	+ passer `lc` en `display : none` (pour éviter les relances maladroites du championnat)
+	+ passer `boutonLancer` en `display : none` (pour éviter les relances maladroites du championnat)
 
 	Essayez de faire tout ça dans une fonction anonyme !
 
-7. Passons à l’action du bouton `jouer_journee`. Celui-ci doit :
+7. Passons à l’action du bouton `jouer-journee`. Celui-ci doit :
 
 	+ faire jouer la journée d’indice `numJournee` ;
 
-	+ passer `jj` en `display : none` ;
+	+ passer `boutonJouerJournee` en `display : none` ;
 
-	+ si `numJournee` est inférieur à 14, passer `js` en `display : inline` (sinon, le championnat est terminé!) ;
+	+ si `numJournee` est inférieur à 14, passer `boutonJourneeSuivante` en `display : inline` (sinon, le championnat est terminé!) ;
 
 	+ classer les équipes ;
 
@@ -375,19 +375,16 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 	Pareil, fonction anonyme.
 
 
-8. Et pour finir, l’action de `journee_suivante`. Celui-ci doit :
+8. Et pour finir, l’action du bouton `journee-suivante`. Celui-ci doit :
 
 	+ augmenter `numJournee` d’une unité ;
 
 	+ afficher la journée correspondant à cette nouvelle valeur de `numJournee` ;
 
-	+ mettre à jour le contenu de la balise `numJ` ;
+	+ mettre à jour le contenu de la balise `num-journee` ;
 
-	+ passser `jj` en `display : inline` et `js` en `display : none`.
+	+ passser `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none`.
 
    Pareil, fonction anonyme.
 
    Actualisez tout ça, et jouez !
-
-
-

@@ -257,15 +257,15 @@ Une Journee aura comme attributs :
 
 ## EXERCICE 5 - le scénario
 
-Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les instructions tests utilisées précédemment. Incluez le fichier scenario.js à la suite des 4 autres fichiers. Ce fichier sera une suite d’instructions. Pour le moment, il contient des déclarations de variables :
+Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les instructions tests utilisées précédemment. Incluez le fichier `scenario.js` à la suite des 4 autres fichiers. Ce fichier sera une suite d’instructions. Pour le moment, il contient des déclarations de variables :
 
-+ des variables qui font le lien avec l’interface html ;
+- des variables qui font le lien avec l’interface html ;
 
-+ d’autres variables comme tabEq et chp;
+- d’autres variables comme `tabEquipes` et `chp`;
 
-	- tabEq sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
+	- `tabEquipes` sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
 
-	- chp prendra comme valeur un Championnat (plus tard).
+	- `chp` prendra comme valeur un Championnat (plus tard).
 
 ### État initial
 
@@ -275,21 +275,21 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
    Programmez l’état d’affichage initial suivant :
 
-   + les `fieldsetJ` et `fieldsetC` sont en `display : none`.
+   + les `bloc-journee` et `bloc-classement` sont en `display : none`.
 
-   + le `fieldsetE` doit être en `display : inline`.
+   + le `bloc-equipes` doit être en `display : inline`.
 
-   + Parmi les enfants du `fieldsteE` :
-      - la `<div id="equipesEngagees">` sera en `display : inline`.
-      - la `<div id="listeEquipes">` sera en `display : none`.
+   + Parmi les enfants du `bloc-equipes` :
+      - la `<div id="equipes-engagees">` sera en `display : inline`.
+      - la `<div id="liste-equipes">` sera en `display : none`.
 
-   + Dans la balise `legend` du `fieldsetE`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
+   + Dans la balise `legend` du `bloc-equipes`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
 
-   + Quand on lancera le championnat, le `fieldsetC` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee_suivante` soit caché, contrairement au bouton `jouer_journee`. Passez donc le `display` de `jj` à `inline` et celui de `js` à `none`.
+   + Quand on lancera le championnat, le `bloc-classement` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee-suivante` soit caché, contrairement au bouton `jouer-journee`. Passez donc le `display` de `boutonJouerJournee` à `inline` et celui de `boutonJourneeSuivante` à `none`.
 	
-2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabEq`. Programmez ceci.
+2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabEquipes`. Programmez ceci.
 
-3. Enfin, pour compléter votre état initial, affectez au `innerHTML` de `ee` la valeur texte suivante :
+3. Enfin, pour compléter votre état initial, affectez au `innerHTML` de `equipesEngagees` la valeur texte suivante :
 
 		"équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
 

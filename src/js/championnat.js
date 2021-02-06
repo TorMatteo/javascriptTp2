@@ -21,19 +21,19 @@ class Championnat {
         ]
     }
 
-    jouer_journee(i) {
+    jouerJournee(i) {
         // à compléter
     }
 
-    afficher_journee(i) {
+    afficherJournee(i) {
         // à compléter
     }
 
-    afficher_classement() {
+    afficherClassement() {
         // à compléter
     }
 
-    classer_equipes() {
+    classerEquipes() {
         // à compléter
     }
 

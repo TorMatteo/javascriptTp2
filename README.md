@@ -201,33 +201,21 @@ Une Journee aura comme attributs :
 
    Analysez ce code et comprenez ce qui est fait. Vous remarquerez en particulier les méthodes sur les tableaux. N’oubliez pas d’insérer le fichier `championnat.js`.
 
-2. Codez la fonction `jouer_journee(i)` dont l’exécution fera jouer la journée n°i du planning (attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `this`).
+2. Codez la fonction `jouerJournee(i)` dont l’exécution fera jouer la journée n°i du planning (attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `this`).
 
-3. Codez la fonction `afficher_journee(i)`, dont l’exécution lancera l’affichage de la journée n°i du planning. Même remarque que pour la question précédente.
+3. Codez la fonction `afficherJournee(i)`, dont l’exécution lancera l’affichage de la journée n°i du planning. Même remarque que pour la question précédente.
 
-4. Codez la fonction `afficher_classement()`. Pour cela, vous remplirez :
+4. Codez la fonction `afficherClassement()`. Pour cela, vous remplirez :
 - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
 - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
 
-5. Codez la fonction `classer_equipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
+5. Codez la fonction `classerEquipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
 
-   **Aide 1** : il peut être utile d’avoir à trier par ordre **croissant** un certain tableau de nombres. Si nous devons trier un tableau `t`, alors cela peut se faire simplement en JavaScript par :
+    **Aide 1** : Il est possible de trier des tableaux en *Javascript* à l'aide de la méthode `Array.sort(compareFunction)`. Cette fonction prend en argument une *fonction de comparaison* qui prend deux arguments. Elle doit renvoyer un nombre strictement positif si le premier argument doit être trié après le second, un nombre strictement négatif si le premier argument doit être trié avant le second et 0 si l'ordre sur les deux arguments n'a pas d'importance (ou si les deux arguments sont identiques).
+    
+    Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction `t.sort((a, b) => a.age - b.age);`. Cette instruction modifie le tableau `t` *en place*.
 
-   `t.sort(function(a,b) {return a-b;})`
-
-   Explication : `t.sort()` trierait `t` en considérant ces éléments comme des chaînes de caractères. Le tri serait alphabétique. Autrement dit, 112 serait considéré comme « inférieur » à 13.
-
-   Le paramètre donné à la méthode `sort` permet d’imposer un autre critère de tri. Pour le cas présent, deux éléments `a` et `b` seront triés dans l’ordre `a < b` si la fonction paramètre retourne un résultat négatif. Comme cette fonction a été codée pour retourner `a-b`, on aura le tri `a < b` si `a-b < 0` ce qui est cohérent avec l’ordre attendu entre les nombres.
-
-   Si c’est encore un peu obscur, retenez que l’instruction `t.sort(function(a,b) {return a-b;})` permet de trier le tableau de nombres `t` par **ordre croissant**.
-
-   De même, l’instruction 
-
-   `t.sort(function(a,b) {return b-a;})`
-
-   permet de trier un tableau de nombres par **ordre décroissant**. Ceci peut servir...
-
-   **Aide 2** : `t.indexOf(num)` retourne l’indice de `num` dans le tableau `t`.
+   **Aide 2** : `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 
    Avec tout ceci, vous devriez vous en tirer.
 

@@ -83,7 +83,7 @@ Une Equipe aura comme attributs :
 
 3. actualisez la page `championnat.html` et testez le constructeur dans la console, par exemple en créant une nouvelle équipe par une instruction comme 
 
-		const eq1 = new Equipe("PSG"); 
+		eq1 = new Equipe("PSG"); 
 
    puis affichez `eq1` dans la console (`eq1` et `Entrée`). Vous pouvez « déplier » l’objet créé et examiner ce qui s’affiche. 
 
@@ -105,9 +105,7 @@ Une Equipe aura comme attributs :
 	   <img src="ressources/aff2.jpg">
    </p>
 
-6. Codez enfin la fonction `mise_a_jour(bp,bc)` qui met à jour le nombre de points, le nombre de buts pour et contre, le nombre de victoires, nuls et défaites, et qui actualise l’évaluation en lançant la fonction `evaluer()`. 
-
-   Remarque : les paramètres `bp` et `bc` correspondent bien sûr au résultat d’un match joué par l’équipe, où elle marque `bp` buts et en encaisse `bc`.
+6. Codez enfin la fonction `miseAJour(nbButsMarques, nbButsEncaisses)` qui met à jour le nombre de points, le nombre de buts pour et contre et le nombre de victoires, nuls et défaites en fonction du résultat d'un match joué par l'équipe. 
 
 7. Testez cette nouvelle fonction à partir de `eq1` qui a certaines valeurs d’attributs suite à vos différentes manœuvres. Par exemple, pour continuer le précédent écran :
 
@@ -117,24 +115,24 @@ Une Equipe aura comme attributs :
 
    Remarque : il peut être utile, puisque nous rafraîchissons régulièrement la page, de sauvegarder les commandes à insérer dans la console dans un script, inséré après `equipe.js`, en bas de `championnat.html` et dont le code pourrait être :
 
-  		let eq1 = new Equipe("PSG");
-		eq1.G = 6;
-		eq1.N = 3;
-		eq1.P = 2;
+  		eq1 = new Equipe("PSG");
+		eq1.nbMatchsGagnes = 6;
+		eq1.nbMatchsNuls = 3;
+		eq1.nbMatchsPerdus = 2;
 		...
 
 ## EXERCICE 2 - l'objet Match
 
 Un Match aura comme attributs : 
 
-- son équipe 1 notée `eq1` ;
-- son équipe 2 notée `eq2` ;
-- le nombre de buts marqués par eq1, qui sera noté `res1`;
-- le nombre de buts marqués par eq2, qui sera noté `res2`;
-- un booléen `played` qui dit si le match a été joué ou non.
+- son équipe 1 notée `equipe1` ;
+- son équipe 2 notée `equipe2` ;
+- le nombre de buts marqués par eq1, qui sera noté `nbButs1`;
+- le nombre de buts marqués par eq2, qui sera noté `nbButs2`;
+- un booléen `estJoue` qui dit si le match a été joué ou non.
 
 
-1. Complétez le constructeur donné dans le fichier `match.js`. Vous initialiserez l’attribut `played` à `false`, puisque le match créé n’est pas encore joué. Vous initialiserez les autres attributs de manière sensée.
+1. Complétez le constructeur donné dans le fichier `match.js`. Vous initialiserez l’attribut `estJoue` à `false`, puisque le match créé n’est pas encore joué. Vous initialiserez les autres attributs de manière sensée.
 
 2. Incorporez le fichier `match.js` à la suite de `equipe.js`.
 
@@ -144,16 +142,16 @@ Un Match aura comme attributs :
 	   <img src="ressources/aff4.jpg">
    </p>
 
-4. Codez la fonction `jouer()` qui permet de donner des valeurs à `this.res1` et à `this.res2`. En général, même s’il y a bien des exceptions, une équipe qui joue à domicile est légèrement favorisée. A vous de le mettre en œuvre. 
+4. Codez la fonction `jouer()` qui permet de donner des valeurs à `this.nbButs1` et à `this.nbButs2`. En général, même s’il y a bien des exceptions, une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre. 
 
    Remarques : 
 
 + `Math.floor(…)` renvoie la partie entière
 + `Math.floor(Math.random()*5)` donne un entier entre 0 et 4.
 
-5. Codez la fonction `maj_equipes()` qui met à jour les attributs des deux équipes du match, à partir des valeurs de `this.res1` et de `this.res2`.
+5. Codez la fonction `majEquipes()` qui met à jour les attributs des deux équipes du match, à partir des valeurs de `this.nbButs1` et de `this.nbButs2`.
 
-   Conseil : réutilisez la méthode `mise_a_jour` de `Equipe`.
+   Conseil : réutilisez la méthode `miseAJour` de `Equipe`.
 
 
 6. Codez enfin la fonction `affichage()` qui sera le `toString()` du match et qui produira quelque chose comme ça : 

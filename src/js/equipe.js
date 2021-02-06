@@ -12,7 +12,7 @@ class Equipe {
 		// à compléter
 	}
 
-	mise_a_jour(bp,bc) {
+	miseAJour(nbButsMarques, nbButsEncaisses) {
 		// à compléter
 	}
 

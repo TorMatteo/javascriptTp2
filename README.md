@@ -87,7 +87,9 @@ Une Equipe aura comme attributs :
 
    puis affichez `eq1` dans la console (`eq1` et `Entrée`). Vous pouvez « déplier » l’objet créé et examiner ce qui s’affiche. 
 
-4. Codez la fonction `estDevant(autreEquipe)` qui renvoie `true` si l'équipe `this` est meilleure au classement que l'équipe `autreEquipe` passée en argument et `false` sinon. Cette fonction doit commencer par essayer de comparer les équipes selon leur nombre de points au classement, puis selon leur différence de buts en cas d'égalité au score, puis selon le nombre de buts marqués en cas d'égalité sur la différence de buts puis finalement selon leur valeur aléatoire en cas d'égalité de tous les autres critères.
+4. Codez la fonction `static compare(eq1, eq2)` qui compare deux équipes selon les critères du classement. La fonction doit renvoyer un nombre strictement positif si l'équipe `eq2` est devant l'équipe `eq1`, un nombre strictement négatif si `eq1` est devant `eq2` et 0 si `eq1 === eq2`.
+
+    Cette fonction doit commencer par essayer de comparer les équipes selon leur nombre de points au classement, puis selon leur différence de buts en cas d'égalité au score, puis selon le nombre de buts marqués en cas d'égalité sur la différence de buts puis finalement selon leur valeur aléatoire en cas d'égalité de tous les autres critères.
 
     Testez cette fonction en créant plusieurs équipes et en modifiant « à la main » les valeurs de leurs attributs (dans la console).
 

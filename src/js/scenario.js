@@ -1,24 +1,24 @@
 // variables correspondant à des balises importantes
-let le = document.getElementById('listeEquipes');
-let ee = document.getElementById('equipesEngagees');
-let lc = document.getElementById('lancer_championnat');
-let js = document.getElementById('journee_suivante');
-let jj = document.getElementById('jouer_journee');
-let fe = document.getElementById('fieldsetE');
-let fj = document.getElementById('fieldsetJ');
-let fc = document.getElementById('fieldsetC');
-let pl = document.getElementById('plus');
-let mo = document.getElementById('moins');
+const listeEquipes = document.getElementById('listeEquipes');
+const equipesEngagees = document.getElementById('equipesEngagees');
+const boutonLancer = document.getElementById('lancer_championnat');
+const boutonJourneeSuivante = document.getElementById('journee_suivante');
+const boutonJouerJournee = document.getElementById('jouer_journee');
+const blocEquipes = document.getElementById('fieldsetE');
+const blocJournee = document.getElementById('fieldsetJ');
+const blocClassement = document.getElementById('fieldsetC');
+const boutonPlus = document.getElementById('plus');
+const boutonMoins = document.getElementById('moins');
 
 // la variable tableau des équipes par défaut
-let tabEq = ["PSG", "ASM", "OM", "ASSE", "OL", "FCN", "EAG", "RCS"];
+let tabEquipes = ["PSG", "ASM", "OM", "ASSE", "OL", "FCN", "EAG", "RCS"];
 
 // la variable Championnat
 let chp;
 
 // les styles d'affichages initiaux
 
-// fieldset J, C et E
+// Blocs équipes, journée et classement
 // à compléter
 
 // div equipesEngagees et listeEquipes
@@ -37,24 +37,24 @@ let chp;
 // programmation des gestions d'événements par des fonctions anonymes
 
 // clic sur l'image plus
-pl.onclick = function () {
+boutonPlus.onclick = function () {
     // à compléter
-}
+};
 
 // clic sur l'image moins
-mo.onclick = function () {
+boutonMoins.onclick = function () {
     // à compléter
-}
+};
 
 // clic sur le bouton lancer championnat
-lc.onclick = function () {
+boutonLancer.onclick = function () {
     // à compléter
-}
+};
 
-jj.onclick = function () {
+boutonJouerJournee.onclick = function () {
     // à compléter
-}
+};
 
-js.onclick = function () {
+boutonJourneeSuivante.onclick = function () {
     // à compléter
-}
+};

@@ -213,7 +213,11 @@ Une Journee aura comme attributs :
 
     **Aide 1** : Il est possible de trier des tableaux en *Javascript* à l'aide de la méthode `Array.sort(compareFunction)`. Cette fonction prend en argument une *fonction de comparaison* qui prend deux arguments. Elle doit renvoyer un nombre strictement positif si le premier argument doit être trié après le second, un nombre strictement négatif si le premier argument doit être trié avant le second et 0 si l'ordre sur les deux arguments n'a pas d'importance (ou si les deux arguments sont identiques).
     
-    Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction `t.sort((a, b) => a.age - b.age);`. Cette instruction modifie le tableau `t` *en place*.
+    Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction
+    
+        t.sort((a, b) => a.age - b.age);
+        
+    Cette instruction modifie le tableau `t` *en place*.
 
    **Aide 2** : `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 

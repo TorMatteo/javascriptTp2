@@ -7,9 +7,9 @@
 
 Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD2, votre fork privé du TD2 (**attention, pas de fork à la main !**):
 
-https://classroom.github.com/a/TiyLfsDY
+https://classroom.github.com/a/y0xY034G
 
-la version [pdf](ressources/td2.pdf)
+<!-- la version [pdf](ressources/td2.pdf) -->
 
 ## INTRODUCTION
 
@@ -26,7 +26,10 @@ Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant 
 
 <div align="center">
     <table>
+     <thead>
         <tr><th>Journée</th><th>Match n°1</th><th>Match n°2</th><th>Match n°3</th><th>Match n°4</th></tr>
+     </thead>
+     <tbody>
         <tr><td>Journée n°01</td><td>E1 – E2</td><td>E3 – E4</td><td>E5 – E6</td><td>E7 – E8</td></tr>
         <tr><td>Journée n°02</td><td>E1 – E3</td><td>E2 – E4</td><td>E5 – E7</td><td>E6 – E8</td></tr>
         <tr><td>Journée n°03</td><td>E4 – E1</td><td>E3 – E2</td><td>E8 – E5</td><td>E7 – E6</td></tr>
@@ -41,6 +44,7 @@ Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant 
         <tr><td>Journée n°12</td><td>E1 – E8</td><td>E7 – E2</td><td>E3 – E6</td><td>E5 – E4</td></tr>
         <tr><td>Journée n°13</td><td>E1 – E6</td><td>E2 – E5</td><td>E3 – E8</td><td>E4 – E7</td></tr>
         <tr><td>Journée n°14</td><td>E7 – E1</td><td>E8 – E2</td><td>E5 – E3</td><td>E6 – E4</td></tr>
+     </tbody>
     </table>
 </div>
 
@@ -152,16 +156,18 @@ Un Match aura comme attributs :
        <img src="ressources/aff4.png" width="80%">
    </p>
 
-4. Codez la fonction `jouer()` qui permet de donner des valeurs à `this.nbButs1` et à `this.nbButs2`. En général, même s’il y a bien des exceptions, une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre.
+4. Codez la fonction `jouer()` qui :
+   * donne des valeurs à `this.nbButs1` et à `this.nbButs2` : En général, même s’il y a bien des exceptions,
+     une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre.
 
-   Remarques :
+     Remarques :
 
-   + `Math.floor(…)` renvoie la partie entière
-   + `Math.floor(Math.random()*5)` donne un entier entre 0 et 4.
+     + `Math.floor(…)` renvoie la partie entière
+     + `Math.floor(Math.random()*5)` donne un entier entre 0 et 4.
 
-5. Codez la fonction `majEquipes()` qui met à jour les attributs des deux équipes du match, à partir des valeurs de `this.nbButs1` et de `this.nbButs2`.
+   * met à jour les attributs des deux équipes du match, à partir des valeurs de `this.nbButs1` et de `this.nbButs2`.
 
-   Conseil : réutilisez la méthode `miseAJour` de `Equipe`.
+     Conseil : réutilisez la méthode `miseAJour` de `Equipe`.
 
 
 6. Codez enfin la fonction `affichage()` qui sera le `toString()` du match et qui produira quelque chose comme ça :
@@ -195,7 +201,6 @@ Une Journee aura comme attributs :
    - joue les 4 matchs de la journée ;
    - affiche la journée par la méthode précédente ;
    - passe le booléen played à `true` ;
-   - met à jour chaque équipe grâce à la fonction `majEquipes()`.
 
 7. Testez cette fonction en la lançant dans la console après avoir testé votre question 5. Vous devez constater l’affichage des nouveaux scores.
 

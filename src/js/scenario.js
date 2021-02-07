@@ -10,8 +10,8 @@ const blocClassement = document.getElementById('bloc-classement');
 const boutonPlus = document.getElementById('plus');
 const boutonMoins = document.getElementById('moins');
 
-// la variable tableau des équipes par défaut
-let tabEquipes = ["PSG", "ASM", "OM", "ASSE", "OL", "FCN", "EAG", "RCS"];
+// la variable tableau des nom des équipes par défaut
+let tabNomEquipes = ["PSG", "ASM", "OM", "ASSE", "OL", "FCN", "EAG", "RCS"];
 
 // la variable Championnat
 let chp;

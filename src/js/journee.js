@@ -1,6 +1,6 @@
 class Journee {
 
-    constructor(match1, match2, match3, match4) {
+    constructor(matchs) {
         // à compléter
     }
 

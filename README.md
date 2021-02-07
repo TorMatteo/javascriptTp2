@@ -180,12 +180,8 @@ Un Match aura comme attributs :
 
 Une Journee aura comme attributs :
 
-- son match n°1 noté `match1`;
-- son match n°2 noté `match2`;
-- son match n°3 noté `match3`;
-- son match n°4 noté `match4`;
+- un tableau de 4 matchs ;
 - un booléen `estJouee` qui dit si la journée a été jouée ou non.
-
 
 1. Complétez le constructeur donné dans le fichier `journee.js`. Vous initialiserez l’attribut `estJouee` à `false`.
 
@@ -277,8 +273,8 @@ Une Journee aura comme attributs :
 Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les instructions tests utilisées précédemment. Incluez le fichier `scenario.js` à la suite des 4 autres fichiers. Ce fichier sera une suite d’instructions. Pour le moment, il contient des déclarations de variables :
 
 - des variables qui font le lien avec l’interface html ;
-- d’autres variables comme `tabEquipes` et `chp`;
-    - `tabEquipes` sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
+- d’autres variables comme `tabNomEquipes` et `chp`;
+    - `tabNomEquipes` sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
     - `chp` prendra comme valeur un Championnat (plus tard).
 
 ### État initial
@@ -297,7 +293,7 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
    + Dans la balise `legend` du `bloc-equipes`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
    + Quand on lancera le championnat, le `bloc-classement` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee-suivante` soit caché, contrairement au bouton `jouer-journee`. Passez donc le `display` de `boutonJouerJournee` à `inline` et celui de `boutonJourneeSuivante` à `none`.
 
-2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabEquipes`. Programmez ceci.
+2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabNomEquipes`. Programmez ceci.
 
 3. Enfin, pour compléter votre état initial, affectez au `innerHTML` de `equipesEngagees` la valeur texte suivante :
 
@@ -352,7 +348,7 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
    Celui-ci doit :
 
-   + appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `bloc-equipes`. Vous utiliserez la variable globale `chp` déclarée au début :
+   + appeler le constructeur de `Championnat` qui prend en paramètre un tableau de huit `Equipe` construites à partir des 8 champs texte du `bloc-equipes`. Vous utiliserez la variable globale `chp` déclarée au début :
      ```js
      chp = new Championnat(…);
      ```

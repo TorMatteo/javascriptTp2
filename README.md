@@ -232,12 +232,11 @@ Une Journee aura comme attributs :
      2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
      3. (Facultatif) `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 
-3. Codez la fonction `afficher` qui doit :
+3. Codez la fonction `afficherJournee(i)`, dont l’exécution lancera l’affichage de la journée n°i du planning. Même remarque que pour la question précédente.
 
-   1. Afficher la journée n°i du planning. Même remarque que pour la question précédente.
-   2. Afficher le classement. Pour cela, vous remplirez :
-      - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
-      - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
+4. Codez la fonction `afficherClassement()`. Pour cela, vous remplirez :
+   - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
+   - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
 
 6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer après tous les fichiers, et qui peut vous aider :
 
@@ -257,10 +256,16 @@ Une Journee aura comme attributs :
     Entrez ensuite dans la console les instructions suivantes :
 
     ```js
-    chp.afficher(1);
+    chp.classerEquipes();
+    chp.afficherClassement();
+    chp.afficherJournee(1);
     chp.jouerJournee(1);
-    chp.afficher(2);
+    chp.classerEquipes();
+    chp.afficherClassement();
+    chp.afficherJournee(2);
     chp.jouerJournee(2);
+    chp.classerEquipes();
+    chp.afficherClassement();
     ```
 
 7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.

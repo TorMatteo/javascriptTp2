@@ -222,7 +222,9 @@ Une Journee aura comme attributs :
         Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction
 
         ```js
-        t.sort((a, b) => a.age - b.age);
+        t.sort(function (a, b) {return (a.age - b.age);});
+        // Ou de manière équivalente
+        // t.sort((a, b) => a.age - b.age);
         ```
 
         Cette instruction modifie le tableau `t` *en place*.
@@ -230,41 +232,35 @@ Une Journee aura comme attributs :
      2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
      3. (Facultatif) `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 
-3. Codez la fonction `afficherJournee(i)`, dont l’exécution lancera l’affichage de la journée n°i du planning. Même remarque que pour la question précédente.
+3. Codez la fonction `afficher` qui doit :
 
-4. Codez la fonction `afficherClassement()`. Pour cela, vous remplirez :
-   - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
-   - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
+   1. Afficher la journée n°i du planning. Même remarque que pour la question précédente.
+   2. Afficher le classement. Pour cela, vous remplirez :
+      - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
+      - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
 
 6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer après tous les fichiers, et qui peut vous aider :
 
    ```html
    <script type="text/javascript">
-      let eq1 = new Equipe("PSG");
-      let eq2 = new Equipe("FCN");
-      let eq3 = new Equipe("ASM");
-      let eq4 = new Equipe("RCS");
-      let eq5 = new Equipe("HAC");
-      let eq6 = new Equipe("RCL");
-      let eq7 = new Equipe("TFC");
-      let eq8 = new Equipe("EAG");
-      let chp = new Championnat(eq1, eq2, eq3, eq4, eq5, eq6, eq7, eq8);
+      let tabEquipes = [new Equipe("PSG"), new Equipe("FCN"), new Equipe("ASM"), new Equipe("RCS"),
+                        new Equipe("HAC"), new Equipe("RCL"), new Equipe("TFC"), new Equipe("EAG")];
+      // Ou de maniere equivalente
+      // let tabNomEquipes = ["PSG", "FCN", "ASM", "RCS", "HAC", "RCL", "TFC", "EAG"];
+      // let tabEquipes = tabNomEquipes.map(nomEq => new Equipe(nomEq));
+      // (cf documentation de Array.prototype.map sur MDN
+      //  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map)
+      let chp = new Championnat(tabEquipes);
    </script>
    ```
 
     Entrez ensuite dans la console les instructions suivantes :
 
     ```js
-    chp.classerEquipes();
-    chp.afficherClassement();
-    chp.afficherJournee(1);
+    chp.afficher(1);
     chp.jouerJournee(1);
-    chp.classerEquipes();
-    chp.afficherClassement();
-    chp.afficherJournee(2);
+    chp.afficher(2);
     chp.jouerJournee(2);
-    chp.classerEquipes();
-    chp.afficherClassement();
     ```
 
 7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.

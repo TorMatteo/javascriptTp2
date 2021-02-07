@@ -25,11 +25,7 @@ class Championnat {
         // à compléter
     }
 
-    afficherJournee(i) {
-        // à compléter
-    }
-
-    afficherClassement() {
+    afficher(i) {
         // à compléter
     }
 

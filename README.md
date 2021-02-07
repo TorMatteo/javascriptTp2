@@ -89,9 +89,11 @@ Une Equipe aura comme attributs :
 
 4. Codez la fonction `static compare(eq1, eq2)` qui compare deux équipes selon les critères du classement. La fonction doit renvoyer un nombre strictement positif si l'équipe `eq2` est devant l'équipe `eq1`, un nombre strictement négatif si `eq1` est devant `eq2` et 0 si `eq1 === eq2`.
 
-    Cette fonction doit commencer par essayer de comparer les équipes selon leur nombre de points au classement, puis selon leur différence de buts en cas d'égalité au score, puis selon le nombre de buts marqués en cas d'égalité sur la différence de buts puis finalement selon leur valeur aléatoire en cas d'égalité de tous les autres critères.
+   Cette fonction doit commencer par essayer de comparer les équipes selon leur nombre de points au classement, puis en cas d'égalité selon leur différence de buts, puis selon le nombre de buts marqués en cas d'égalité sur la différence de buts puis finalement selon leur valeur aléatoire en cas d'égalité de tous les autres critères.
 
-    Testez cette fonction en créant plusieurs équipes et en modifiant « à la main » les valeurs de leurs attributs (dans la console).
+   Testez cette fonction en créant plusieurs équipes et en modifiant « à la main » les valeurs de leurs attributs (dans la console).
+
+   **Dépannage :** Si vous bloquez sur la fonction `compare`, vous pouvez tricher en définissant un score pour chaque équipe `score = points * 10000 + differenceButs * 100 + nbButsPour + seed`, et en comparant le score des 2 équipes.
 
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 
@@ -124,6 +126,10 @@ Une Equipe aura comme attributs :
     eq1.nbMatchsPerdus = 2;
     ...
     ```
+
+8. (Bonus) Comme le nombre de points se déduit des autres attributs, il est plus sage qu'il ne soit pas stocké comme attribut. En effet, on veut éviter qu'un bout de code de `equipe.js` calcule mal ce nombre de points, ce qui affecterait le reste de la classe. **Changez** donc votre code pour remplacer cet attribut par une fonction `nbPoints()` et mettez à jour le reste de votre code.
+
+   De même, comme vous avez utilisé plusieures fois la différence de buts d'une équipe, il serait de bon aloi d'en faire une méthode.
 
 ## EXERCICE 2 - l'objet Match
 
@@ -293,6 +299,8 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
         "Équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
 
    Programmez tout ceci et testez en rafraîchissant la page.
+
+   **Astuce :** Plutôt que d'écrire la chaîne de caractère "en dur", vous pouvez l'obtenir facilement à partir de `equipesEngagees`à l'aide de [la méthode `join()` de la classe `Array`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/join).
 
 
 ### Gestion des événements click

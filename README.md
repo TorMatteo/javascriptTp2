@@ -1,4 +1,4 @@
-# ![](ressources/logo.jpeg) Prog web client riche - JavaScript 
+# ![](ressources/logo.jpeg) Prog web client riche - JavaScript
 
 ### IUT Montpellier-Sète – Département Informatique
 
@@ -15,9 +15,9 @@ la version [pdf](ressources/td2.pdf)
 
 Pour ce TD2, vous disposez d’une architecture web comprenant un fichier html, un fichier css et quelques autres fichiers. Clonez cette architecture dans un dossier JS/TD2 de votre public_html.
 
-Dans le TD1 nous avons eu une approche fonctionnelle de JavaScript : tout notre code a été construit autour de quelques fonctions, et c’était suffisant. 
+Dans le TD1 nous avons eu une approche fonctionnelle de JavaScript : tout notre code a été construit autour de quelques fonctions, et c’était suffisant.
 
-Dans ce TD2, vous allez devoir construire des objets JavaScript, sans effet immédiat sur le navigateur. La console du navigateur sera par contre d’une grande utilité. La touche F12 sera votre amie … 
+Dans ce TD2, vous allez devoir construire des objets JavaScript, sans effet immédiat sur le navigateur. La console du navigateur sera par contre d’une grande utilité. La touche F12 sera votre amie …
 
 Quelques éléments de compréhension extra-JavaScript sont utiles  pour réaliser ce TD :
 Dans un championnat de foot à 8 équipes, chaque équipe rencontre chacune des sept autres équipes deux fois (match aller et match retour) : une fois sur son terrain (à domicile) et une fois sur le terrain de l’autre équipe (à l’extérieur).
@@ -25,23 +25,23 @@ Dans un championnat de foot à 8 équipes, chaque équipe rencontre chacune des 
 Un championnat à 8 équipes comporte donc 14 journées, chaque journée étant composée de 4 matchs. Le planning de ces 14 journées est donné dans le tableau suivant :
 
 <div align="center">
-	<table>
-		<tr><th>Journée</th><th>Match n°1</th><th>Match n°2</th><th>Match n°3</th><th>Match n°4</th></tr>
-		<tr><td>Journée n°01</td><td>E1 – E2</td><td>E3 – E4</td><td>E5 – E6</td><td>E7 – E8</td></tr>
-		<tr><td>Journée n°02</td><td>E1 – E3</td><td>E2 – E4</td><td>E5 – E7</td><td>E6 – E8</td></tr>
-		<tr><td>Journée n°03</td><td>E4 – E1</td><td>E3 – E2</td><td>E8 – E5</td><td>E7 – E6</td></tr>
-		<tr><td>Journée n°04</td><td>E1 – E5</td><td>E2 – E6</td><td>E3 – E7</td><td>E4 – E8</td></tr>
-		<tr><td>Journée n°05</td><td>E8 – E1</td><td>E2 – E7</td><td>E6 – E3</td><td>E4 – E5</td></tr>
-		<tr><td>Journée n°06</td><td>E6 – E1</td><td>E5 – E2</td><td>E8 – E3</td><td>E7 – E4</td></tr>
-		<tr><td>Journée n°07</td><td>E1 – E7</td><td>E2 – E8</td><td>E3 – E5</td><td>E4 – E6</td></tr>
-		<tr><td>Journée n°08</td><td>E3 – E1</td><td>E4 – E2</td><td>E7 – E5</td><td>E8 – E6</td></tr>
-		<tr><td>Journée n°09</td><td>E1 – E4</td><td>E2 – E3</td><td>E5 – E8</td><td>E6 – E7</td></tr>
-		<tr><td>Journée n°10</td><td>E5 – E1</td><td>E6 – E2</td><td>E7 – E3</td><td>E8 – E4</td></tr>
-		<tr><td>Journée n°11</td><td>E2 – E1</td><td>E4 – E3</td><td>E6 – E5</td><td>E8 – E7</td></tr>
-		<tr><td>Journée n°12</td><td>E1 – E8</td><td>E7 – E2</td><td>E3 – E6</td><td>E5 – E4</td></tr>
-		<tr><td>Journée n°13</td><td>E1 – E6</td><td>E2 – E5</td><td>E3 – E8</td><td>E4 – E7</td></tr>
-		<tr><td>Journée n°14</td><td>E7 – E1</td><td>E8 – E2</td><td>E5 – E3</td><td>E6 – E4</td></tr>
-	</table>	
+    <table>
+        <tr><th>Journée</th><th>Match n°1</th><th>Match n°2</th><th>Match n°3</th><th>Match n°4</th></tr>
+        <tr><td>Journée n°01</td><td>E1 – E2</td><td>E3 – E4</td><td>E5 – E6</td><td>E7 – E8</td></tr>
+        <tr><td>Journée n°02</td><td>E1 – E3</td><td>E2 – E4</td><td>E5 – E7</td><td>E6 – E8</td></tr>
+        <tr><td>Journée n°03</td><td>E4 – E1</td><td>E3 – E2</td><td>E8 – E5</td><td>E7 – E6</td></tr>
+        <tr><td>Journée n°04</td><td>E1 – E5</td><td>E2 – E6</td><td>E3 – E7</td><td>E4 – E8</td></tr>
+        <tr><td>Journée n°05</td><td>E8 – E1</td><td>E2 – E7</td><td>E6 – E3</td><td>E4 – E5</td></tr>
+        <tr><td>Journée n°06</td><td>E6 – E1</td><td>E5 – E2</td><td>E8 – E3</td><td>E7 – E4</td></tr>
+        <tr><td>Journée n°07</td><td>E1 – E7</td><td>E2 – E8</td><td>E3 – E5</td><td>E4 – E6</td></tr>
+        <tr><td>Journée n°08</td><td>E3 – E1</td><td>E4 – E2</td><td>E7 – E5</td><td>E8 – E6</td></tr>
+        <tr><td>Journée n°09</td><td>E1 – E4</td><td>E2 – E3</td><td>E5 – E8</td><td>E6 – E7</td></tr>
+        <tr><td>Journée n°10</td><td>E5 – E1</td><td>E6 – E2</td><td>E7 – E3</td><td>E8 – E4</td></tr>
+        <tr><td>Journée n°11</td><td>E2 – E1</td><td>E4 – E3</td><td>E6 – E5</td><td>E8 – E7</td></tr>
+        <tr><td>Journée n°12</td><td>E1 – E8</td><td>E7 – E2</td><td>E3 – E6</td><td>E5 – E4</td></tr>
+        <tr><td>Journée n°13</td><td>E1 – E6</td><td>E2 – E5</td><td>E3 – E8</td><td>E4 – E7</td></tr>
+        <tr><td>Journée n°14</td><td>E7 – E1</td><td>E8 – E2</td><td>E5 – E3</td><td>E6 – E4</td></tr>
+    </table>
 </div>
 
 Ce planning est arrangé pour qu’une équipe ne joue pas plus de 2 matchs consécutifs à domicile (idem à l’extérieur).
@@ -53,7 +53,7 @@ Chaque match verra son issue déterminée par un tirage au sort :
 
 On comptabilise en permanence le nombre total de buts marqués par une équipe, ainsi que le nombre total de buts encaissés. Cela peut servir, au niveau du classement, à départager les équipes ayant le même nombre de points.
 
-Les critères pour le classement sont, dans l’ordre : 
+Les critères pour le classement sont, dans l’ordre :
 - le nombre total de points ;
 - la différence entre buts marqués et buts encaissés ;
 - la meilleure attaque (nombre de buts marqués) ;
@@ -62,7 +62,7 @@ Les critères pour le classement sont, dans l’ordre :
 
 ## EXERCICE 1 - l'objet Equipe
 
-Une Equipe aura comme attributs : 
+Une Equipe aura comme attributs :
 
 - son nom ;
 - son classement ;
@@ -77,15 +77,15 @@ Une Equipe aura comme attributs :
 
 1. Complétez le constructeur donné dans le fichier `equipe.js` (vous pouvez utiliser la fonction `Math.random()` pour générer un nombre aléatoire entre 0 et 1).
 
-2. Ajoutez le script `equipe.js` au fichier `championnat.html` en ajoutant la ligne suivante dans la balise `<head>` : 
+2. Ajoutez le script `equipe.js` au fichier `championnat.html` en ajoutant la ligne suivante dans la balise `<head>` :
 
-		<script defer type="text/javascript" src="js/equipe.js"></script>
+        <script defer type="text/javascript" src="js/equipe.js"></script>
 
-3. actualisez la page `championnat.html` et testez le constructeur dans la console, par exemple en créant une nouvelle équipe par une instruction comme 
+3. actualisez la page `championnat.html` et testez le constructeur dans la console, par exemple en créant une nouvelle équipe par une instruction comme
 
-		eq1 = new Equipe("PSG"); 
+        eq1 = new Equipe("PSG");
 
-   puis affichez `eq1` dans la console (`eq1` et `Entrée`). Vous pouvez « déplier » l’objet créé et examiner ce qui s’affiche. 
+   puis affichez `eq1` dans la console (`eq1` et `Entrée`). Vous pouvez « déplier » l’objet créé et examiner ce qui s’affiche.
 
 4. Codez la fonction `static compare(eq1, eq2)` qui compare deux équipes selon les critères du classement. La fonction doit renvoyer un nombre strictement positif si l'équipe `eq2` est devant l'équipe `eq1`, un nombre strictement négatif si `eq1` est devant `eq2` et 0 si `eq1 === eq2`.
 
@@ -96,7 +96,7 @@ Une Equipe aura comme attributs :
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 
    <p align="center">
-	   <img src="ressources/aff.png" width="80%">
+       <img src="ressources/aff.png" width="80%">
    </p>
 
    Le numéro 1 devant le nom de l’équipe est son classement.
@@ -104,28 +104,30 @@ Une Equipe aura comme attributs :
    Pour le moment, ce n'est pas important, mais vous pourrez, **plus tard**, styliser un peu mieux cet affichage pour que les affichages des huit équipes donnent un rendu de tableau, comme ci-dessous :
 
    <p align="center">
-	   <img src="ressources/aff2.jpg">
+       <img src="ressources/aff2.jpg">
    </p>
 
-6. Codez enfin la fonction `miseAJour(nbButsMarques, nbButsEncaisses)` qui met à jour le nombre de points, le nombre de buts pour et contre et le nombre de victoires, nuls et défaites en fonction du résultat d'un match joué par l'équipe. 
+6. Codez enfin la fonction `miseAJour(nbButsMarques, nbButsEncaisses)` qui met à jour le nombre de points, le nombre de buts pour et contre et le nombre de victoires, nuls et défaites en fonction du résultat d'un match joué par l'équipe.
 
 7. Testez cette nouvelle fonction à partir de `eq1` qui a certaines valeurs d’attributs suite à vos différentes manœuvres. Par exemple, pour continuer le précédent écran :
 
    <p align="center">
-	   <img src="ressources/aff3.png" width="80%">
+       <img src="ressources/aff3.png" width="80%">
    </p>
 
    Remarque : il peut être utile, puisque nous rafraîchissons régulièrement la page, de sauvegarder les commandes à insérer dans la console dans un script, inséré après `equipe.js`, en bas de `championnat.html` et dont le code pourrait être :
 
-  		eq1 = new Equipe("PSG");
-		eq1.nbMatchsGagnes = 6;
-		eq1.nbMatchsNuls = 3;
-		eq1.nbMatchsPerdus = 2;
-		...
+   ```js
+    eq1 = new Equipe("PSG");
+    eq1.nbMatchsGagnes = 6;
+    eq1.nbMatchsNuls = 3;
+    eq1.nbMatchsPerdus = 2;
+    ...
+    ```
 
 ## EXERCICE 2 - l'objet Match
 
-Un Match aura comme attributs : 
+Un Match aura comme attributs :
 
 - son équipe 1 notée `equipe1` ;
 - son équipe 2 notée `equipe2` ;
@@ -141,30 +143,30 @@ Un Match aura comme attributs :
 3. Testez votre constructeur en créant deux équipes, puis un match entre ces deux équipes. Exemple de test :
 
    <p align="center">
-	   <img src="ressources/aff4.png" width="80%">
+       <img src="ressources/aff4.png" width="80%">
    </p>
 
-4. Codez la fonction `jouer()` qui permet de donner des valeurs à `this.nbButs1` et à `this.nbButs2`. En général, même s’il y a bien des exceptions, une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre. 
+4. Codez la fonction `jouer()` qui permet de donner des valeurs à `this.nbButs1` et à `this.nbButs2`. En général, même s’il y a bien des exceptions, une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre.
 
-   Remarques : 
+   Remarques :
 
-+ `Math.floor(…)` renvoie la partie entière
-+ `Math.floor(Math.random()*5)` donne un entier entre 0 et 4.
+   + `Math.floor(…)` renvoie la partie entière
+   + `Math.floor(Math.random()*5)` donne un entier entre 0 et 4.
 
 5. Codez la fonction `majEquipes()` qui met à jour les attributs des deux équipes du match, à partir des valeurs de `this.nbButs1` et de `this.nbButs2`.
 
    Conseil : réutilisez la méthode `miseAJour` de `Equipe`.
 
 
-6. Codez enfin la fonction `affichage()` qui sera le `toString()` du match et qui produira quelque chose comme ça : 
+6. Codez enfin la fonction `affichage()` qui sera le `toString()` du match et qui produira quelque chose comme ça :
 
    <p align="center">
-	   <img src="ressources/aff5.png" width="80%">
+       <img src="ressources/aff5.png" width="80%">
    </p>
 
 ## EXERCICE 3 - l'objet Journee
 
-Une Journee aura comme attributs : 
+Une Journee aura comme attributs :
 
 - son match n°1 noté `match1`;
 - son match n°2 noté `match2`;
@@ -184,20 +186,20 @@ Une Journee aura comme attributs :
 5. Testez votre fonction `afficher()` dans la console. Elle doit produire un affichage visible (enfin !) dans le navigateur. Vous améliorerez l’esthétique de votre affichage plus tard (avec des balises `<table>`). L’essentiel n’est pas là.
 
 6. Codez la fonction `jouer()` qui, si la journée n’est pas encore jouée :
-- joue les 4 matchs de la journée ;
-- affiche la journée par la méthode précédente ;
-- passe le booléen played à `true` ;
-- met à jour chaque équipe grâce à la fonction `majEquipes()`.
+   - joue les 4 matchs de la journée ;
+   - affiche la journée par la méthode précédente ;
+   - passe le booléen played à `true` ;
+   - met à jour chaque équipe grâce à la fonction `majEquipes()`.
 
 7. Testez cette fonction en la lançant dans la console après avoir testé votre question 5. Vous devez constater l’affichage des nouveaux scores.
 
 
 ## EXERCICE 4 - l’objet Championnat
 
-1. Le constructeur de Championnat vous est fourni. Un objet Championnat a trois attributs : 
-- un tableau d’équipes nommé  `tabEquipes` ;
-- un entier `numJournee` qui dit quelle est la journée active ;
-- un tableau `journees` contenant les 14 journées du planning.
+1. Le constructeur de Championnat vous est fourni. Un objet Championnat a trois attributs :
+   - un tableau d’équipes nommé  `tabEquipes` ;
+   - un entier `numJournee` qui dit quelle est la journée active ;
+   - un tableau `journees` contenant les 14 journées du planning.
 
    Analysez ce code et comprenez ce qui est fait. Vous remarquerez en particulier les méthodes sur les tableaux. N’oubliez pas d’insérer le fichier `championnat.js`.
 
@@ -206,53 +208,57 @@ Une Journee aura comme attributs :
 3. Codez la fonction `afficherJournee(i)`, dont l’exécution lancera l’affichage de la journée n°i du planning. Même remarque que pour la question précédente.
 
 4. Codez la fonction `afficherClassement()`. Pour cela, vous remplirez :
-- la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
-- les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
+   - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
+   - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
 
 5. Codez la fonction `classerEquipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
 
     **Aide 1** : Il est possible de trier des tableaux en *Javascript* à l'aide de la méthode `Array.sort(compareFunction)`. Cette fonction prend en argument une *fonction de comparaison* qui prend deux arguments. Elle doit renvoyer un nombre strictement positif si le premier argument doit être trié après le second, un nombre strictement négatif si le premier argument doit être trié avant le second et 0 si l'ordre sur les deux arguments n'a pas d'importance (ou si les deux arguments sont identiques).
-    
+
     Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction
-    
-        t.sort((a, b) => a.age - b.age);
-        
+
+    ```js
+    t.sort((a, b) => a.age - b.age);
+    ```
+
     Cette instruction modifie le tableau `t` *en place*.
 
-   **Aide 2** : `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
+   **Aide 2** (Optionnelle) : `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 
    Avec tout ceci, vous devriez vous en tirer.
 
 6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer après tous les fichiers, et qui peut vous aider :
 
-		<script type="text/javascript">
-	       let eq1 = new Equipe("PSG");
-	       let eq2 = new Equipe("FCN");
-	       let eq3 = new Equipe("ASM");
-	       let eq4 = new Equipe("RCS");
-	       let eq5 = new Equipe("HAC");
-	       let eq6 = new Equipe("RCL");
-	       let eq7 = new Equipe("TFC");
-	       let eq8 = new Equipe("EAG");
-	       let chp = new Championnat(eq1, eq2, eq3, eq4, eq5, eq6, eq7, eq8);
-	    </script>
+   ```html
+   <script type="text/javascript">
+      let eq1 = new Equipe("PSG");
+      let eq2 = new Equipe("FCN");
+      let eq3 = new Equipe("ASM");
+      let eq4 = new Equipe("RCS");
+      let eq5 = new Equipe("HAC");
+      let eq6 = new Equipe("RCL");
+      let eq7 = new Equipe("TFC");
+      let eq8 = new Equipe("EAG");
+      let chp = new Championnat(eq1, eq2, eq3, eq4, eq5, eq6, eq7, eq8);
+   </script>
+   ```
 
-	Entrez ensuite dans la console les instructions suivantes :
+    Entrez ensuite dans la console les instructions suivantes :
 
-		chp.classerEquipes();
-		chp.afficherClassement();
-		chp.afficherJournee(1);
-		chp.jouerJournee(1);
-		chp.classerEquipes();
-		chp.afficherClassement();
-		chp.afficherJournee(2);
-		chp.jouerJournee(2);
-		chp.classerEquipes();
-		chp.afficherClassement();
-	
-	etc.
+    ```js
+    chp.classerEquipes();
+    chp.afficherClassement();
+    chp.afficherJournee(1);
+    chp.jouerJournee(1);
+    chp.classerEquipes();
+    chp.afficherClassement();
+    chp.afficherJournee(2);
+    chp.jouerJournee(2);
+    chp.classerEquipes();
+    chp.afficherClassement();
+    ```
 
-7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.  
+7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.
 
 
 ## EXERCICE 5 - le scénario
@@ -260,38 +266,31 @@ Une Journee aura comme attributs :
 Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les instructions tests utilisées précédemment. Incluez le fichier `scenario.js` à la suite des 4 autres fichiers. Ce fichier sera une suite d’instructions. Pour le moment, il contient des déclarations de variables :
 
 - des variables qui font le lien avec l’interface html ;
-
 - d’autres variables comme `tabEquipes` et `chp`;
-
-	- `tabEquipes` sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
-
-	- `chp` prendra comme valeur un Championnat (plus tard).
+    - `tabEquipes` sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
+    - `chp` prendra comme valeur un Championnat (plus tard).
 
 ### État initial
 
-1. Au début, certains éléments seront en `display : inline`, d’autres en `display :  none`. Tous ces styles sont amenés à passer d’un état à l’autre en fonctions d’événements clic divers, et ceci restera à programmer. 
+1. Au début, certains éléments seront en `display : inline`, d’autres en `display :  none`. Tous ces styles sont amenés à passer d’un état à l’autre en fonctions d’événements clic divers, et ceci restera à programmer.
 
    Rappel: on peut accéder au `display` d’un élément `elt` par `elt.style.display = "…"`.
 
    Programmez l’état d’affichage initial suivant :
 
    + les `bloc-journee` et `bloc-classement` sont en `display : none`.
-
    + le `bloc-equipes` doit être en `display : inline`.
-
    + Parmi les enfants du `bloc-equipes` :
       - la `<div id="equipes-engagees">` sera en `display : inline`.
       - la `<div id="liste-equipes">` sera en `display : none`.
-
    + Dans la balise `legend` du `bloc-equipes`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
-
    + Quand on lancera le championnat, le `bloc-classement` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee-suivante` soit caché, contrairement au bouton `jouer-journee`. Passez donc le `display` de `boutonJouerJournee` à `inline` et celui de `boutonJourneeSuivante` à `none`.
-	
+
 2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabEquipes`. Programmez ceci.
 
 3. Enfin, pour compléter votre état initial, affectez au `innerHTML` de `equipesEngagees` la valeur texte suivante :
 
-		"Équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
+        "Équipes engagées : PSG - ASM - OL - OM - FCN - ASSE - MHSC - EAG"
 
    Programmez tout ceci et testez en rafraîchissant la page.
 
@@ -299,24 +298,28 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 ### Gestion des événements click
 
 4. On peut programmer la gestion d’un événement `click` de plusieurs façons (voir TD1). Dans notre cas, nous allons utiliser des « fonctions anonymes » :
-           
-        boutonPlus.onclick = function () {
-            boutonPlus.style.display = "none";
-            boutonMoins.style.display = "inline";
-            listeEquipes.style.display = "inline";
-            equipesEngagees.style.display = "none";
-        };
-	
+
+   ```js
+   boutonPlus.onclick = function () {
+       boutonPlus.style.display = "none";
+       boutonMoins.style.display = "inline";
+       listeEquipes.style.display = "inline";
+       equipesEngagees.style.display = "none";
+   };
+   ```
+
    Dans le code précédent, on affecte à l’attribut `onclick` de `boutonPlus` une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’agir sur le `display` d’éléments. Un code équivalent aurait été :
 
-		function reactionAuClicPlus() {
-            boutonPlus.style.display = "none";
-            boutonMoins.style.display = "inline";
-            listeEquipes.style.display = "inline";
-            equipesEngagees.style.display = "none";
-		}
+   ```js
+   function reactionAuClicPlus() {
+       boutonPlus.style.display = "none";
+       boutonMoins.style.display = "inline";
+       listeEquipes.style.display = "inline";
+       equipesEngagees.style.display = "none";
+   }
 
-		boutonPlus.onclick = reactionAuClicPlus ;
+   boutonPlus.onclick = reactionAuClicPlus;
+   ```
 
    Mais comme cette fonction ne sert que là, on peut la passer en fonction anonyme sans problème.
 
@@ -324,15 +327,11 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
 5. On va maintenant gérer le clic sur l’image `moins`. Adaptez le code précédent pour programmer le comportement suivant, quand on clique sur le moins :
 
-	+ l’image `plus` doit réapparaître;
-
-	+ l’image `moins` doit disparaître;
-
-	+ la `<div id="liste-equipes">` doit disparaître ;
-
-	+ le `innerHTML` de la `<div id="equipes-engagees">` doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des `input` qui serviront ;
-
-	+ cette `<div id="equipes-engagees">` doit apparaître ;
+   + l’image `plus` doit réapparaître;
+   + l’image `moins` doit disparaître;
+   + la `<div id="liste-equipes">` doit disparaître ;
+   + le `innerHTML` de la `<div id="equipes-engagees">` doit être recalculé pour afficher le même type de phrase que celle par défaut, mais cette fois ce sont les valeurs des `input` qui serviront ;
+   + cette `<div id="equipes-engagees">` doit apparaître ;
 
    Programmez tout ceci, actualisez la page et vérifiez que les comportements attendus sont opérationnels.
 
@@ -340,50 +339,37 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
    Celui-ci doit :
 
-	+ appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `bloc-equipes`. Vous utiliserez la variable globale `chp` déclarée au début :
+   + appeler le constructeur de `Championnat`, les paramètres étant huit équipes construites à partir des 8 champs texte du `bloc-equipes`. Vous utiliserez la variable globale `chp` déclarée au début :
+     ```js
+     chp = new Championnat(…);
+     ```
+   + classer ces équipes ;
+   + afficher le classement ;
+   + actualiser la balise `<legend id="num-journee">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee`) ;
+   + afficher la journée correspondant à `numJournee` (c’est-à-dire afficher les 4 matchs) ;
+   + passer `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none` ;
+   + passer `blocJournee` et `blocClassement` en `display : inline`, `bloc-Equipes` en `display : none` ;
+   + passer `boutonLancer` en `display : none` (pour éviter les relances maladroites du championnat)
 
-		chp = new Championnat(…);
-
-	+ classer ces équipes ;
-
-	+ afficher le classement ;
-
-	+ actualiser la balise `<legend id="num-journee">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee`) ;
-
-	+ afficher la journée correspondant à `numJournee` (c’est-à-dire afficher les 4 matchs) ;
-
-	+ passer `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none` ;
-
-	+ passer `blocJournee` et `blocClassement` en `display : inline`, `bloc-Equipes` en `display : none` ;
-
-	+ passer `boutonLancer` en `display : none` (pour éviter les relances maladroites du championnat)
-
-	Essayez de faire tout ça dans une fonction anonyme !
+   Essayez de faire tout ça dans une fonction anonyme !
 
 7. Passons à l’action du bouton `jouer-journee`. Celui-ci doit :
 
-	+ faire jouer la journée d’indice `numJournee` ;
+    + faire jouer la journée d’indice `numJournee` ;
+    + passer `boutonJouerJournee` en `display : none` ;
+    + si `numJournee` est inférieur à 14, passer `boutonJourneeSuivante` en `display : inline` (sinon, le championnat est terminé!) ;
+    + classer les équipes ;
+    + afficher le classement.
 
-	+ passer `boutonJouerJournee` en `display : none` ;
-
-	+ si `numJournee` est inférieur à 14, passer `boutonJourneeSuivante` en `display : inline` (sinon, le championnat est terminé!) ;
-
-	+ classer les équipes ;
-
-	+ afficher le classement.
-
-	Pareil, fonction anonyme.
+   Pareil, fonction anonyme.
 
 
 8. Et pour finir, l’action du bouton `journee-suivante`. Celui-ci doit :
 
-	+ augmenter `numJournee` d’une unité ;
-
-	+ afficher la journée correspondant à cette nouvelle valeur de `numJournee` ;
-
-	+ mettre à jour le contenu de la balise `num-journee` ;
-
-	+ passser `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none`.
+    + augmenter `numJournee` d’une unité ;
+    + afficher la journée correspondant à cette nouvelle valeur de `numJournee` ;
+    + mettre à jour le contenu de la balise `num-journee` ;
+    + passser `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none`.
 
    Pareil, fonction anonyme.
 

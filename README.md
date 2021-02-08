@@ -257,10 +257,13 @@ Une Journee aura comme attributs :
     Entrez ensuite dans la console les instructions suivantes :
 
     ```js
-    chp.afficher(1);
+    chp.afficherClassement();
+    chp.afficherJournee(1);
     chp.jouerJournee(1);
-    chp.afficher(2);
+    chp.afficherClassement();
+    chp.afficherJournee(2);
     chp.jouerJournee(2);
+    chp.afficherClassement();
     ```
 
 7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.
@@ -307,12 +310,12 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 4. On peut programmer la gestion d’un événement `click` de plusieurs façons (voir TD1). Dans notre cas, nous allons utiliser des « fonctions anonymes » :
 
    ```js
-   boutonPlus.onclick = function () {
-       boutonPlus.style.display = "none";
-       boutonMoins.style.display = "inline";
-       listeEquipes.style.display = "inline";
-       equipesEngagees.style.display = "none";
-   };
+   boutonPlus.addEventListener("click",function () {
+      boutonPlus.style.display = "none";
+      boutonMoins.style.display = "inline";
+      listeEquipes.style.display = "inline";
+      equipesEngagees.style.display = "none";
+   });
    ```
 
    Dans le code précédent, on affecte à l’attribut `onclick` de `boutonPlus` une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’agir sur le `display` d’éléments. Un code équivalent aurait été :
@@ -325,7 +328,7 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
        equipesEngagees.style.display = "none";
    }
 
-   boutonPlus.onclick = reactionAuClicPlus;
+   boutonPlus.addEventListener("click", reactionAuClicPlus);
    ```
 
    Mais comme cette fonction ne sert que là, on peut la passer en fonction anonyme sans problème.

@@ -37,24 +37,24 @@ let chp;
 // programmation des gestions d'événements par des fonctions anonymes
 
 // clic sur l'image plus
-boutonPlus.onclick = function () {
+boutonPlus.addEventListener("click", function () {
     // à compléter
-};
+});
 
 // clic sur l'image moins
-boutonMoins.onclick = function () {
+boutonMoins.addEventListener("click", function () {
     // à compléter
-};
+});
 
 // clic sur le bouton lancer championnat
-boutonLancer.onclick = function () {
+boutonLancer.addEventListener("click", function () {
     // à compléter
-};
+});
 
-boutonJouerJournee.onclick = function () {
+boutonJouerJournee.addEventListener("click", function () {
     // à compléter
-};
+});
 
-boutonJourneeSuivante.onclick = function () {
+boutonJourneeSuivante.addEventListener("click", function () {
     // à compléter
-};
+});

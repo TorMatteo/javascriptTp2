@@ -72,3 +72,7 @@ input[type=button] {
 		margin-left: 10%;
 	}
 }
+
+.cache {
+	display: none;
+}

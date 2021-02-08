@@ -22,11 +22,15 @@ class Championnat {
         ]
     }
 
-    jouerJournee(i) {
+    jouerJournee() {
         // à compléter
     }
 
-    afficher(i) {
+    afficherJournee() {
+        // à compléter
+    }
+
+    afficherClassement() {
         // à compléter
     }
 

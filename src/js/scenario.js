@@ -17,6 +17,15 @@ let tabNomEquipes = ["PSG", "ASM", "OM", "ASSE", "OL", "FCN", "EAG", "RCS"];
 // la variable Championnat
 let chp;
 
+// Fonctions utiles
+function afficher (element) {
+    // à compléter
+}
+
+function cacher (element) {
+    // à compléter
+}
+
 // les styles d'affichages initiaux
 
 // Blocs équipes, journée et classement

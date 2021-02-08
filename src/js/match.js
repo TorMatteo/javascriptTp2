@@ -1,6 +1,6 @@
 class Match {
 
-    constructor(eq1, eq2) {
+    constructor(equipe1, equipe2) {
         // à compléter
     }
 

@@ -6,7 +6,7 @@ class Equipe {
 
     /**
      * Compare deux équipes passées en argument selon les critères du classement.
-     * Les équipes sont comparées selon leur score, puis en cas d'égalité selon leur différence de buts, puis en cas
+     * Les équipes sont comparées selon leur nombre de points, puis en cas d'égalité selon leur différence de buts, puis en cas
      * d'égalité selon leur nombre de buts marqués. En cas d'égalité complète, elles sont départagées en fonction
      * de la valeur aléatoire générée à la création de chaque équipe.
      *

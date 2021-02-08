@@ -157,7 +157,8 @@ Un Match aura comme attributs :
    </p>
 
 4. Codez la fonction `jouer()` qui :
-   * donne des valeurs à `this.nbButs1` et à `this.nbButs2` : En général, même s’il y a bien des exceptions,
+   * met à jour `estJoue` ;
+   * donne des valeurs aléatoirement à `this.nbButs1` et à `this.nbButs2` : En général, même s’il y a bien des exceptions,
      une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre.
 
      Remarques :
@@ -195,7 +196,6 @@ Une Journee aura comme attributs :
 
 6. Codez la fonction `jouer()` qui, si la journée n’est pas encore jouée :
    - joue les 4 matchs de la journée ;
-   - affiche la journée par la méthode précédente ;
    - passe le booléen played à `true` ;
 
 7. Testez cette fonction en la lançant dans la console après avoir testé votre question 5. Vous devez constater l’affichage des nouveaux scores.
@@ -210,20 +210,22 @@ Une Journee aura comme attributs :
 
    Analysez ce code et comprenez ce qui est fait. Vous remarquerez en particulier les méthodes sur les tableaux. N’oubliez pas d’insérer le fichier `championnat.js`.
 
-2. Codez la fonction `jouerJournee(i)` qui doit faire jouer la journée n°i du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `this`.
+2. Codez la fonction `jouerJournee()` qui doit faire jouer la journée courante `numJournee` du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `this`.
 
-3. Codez la fonction `afficher` qui doit :
+3. Codez la fonction `afficherJournee()` qui doit afficher la journée courante `numJournee` du planning. Même remarque que pour la question précédente.
 
-   1. Afficher la journée n°i du planning. Même remarque que pour la question précédente.
-   2. Afficher le classement. Pour cela, vous remplirez :
-      - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
-      - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
+4. Codez la fonction `afficherClassement()` qui remplira  les huit `<tr>` du `<tbody>` dans `<fieldset id="bloc-classement">`. La n-ième ligne `<tr>` recevra l’affichage de l’équipe qui est classée n-ième.
+
+   Remarque :
+
+   * Servez-vous de la méthode `querySelectorAll` (ou `querySelector` et `children`) vue dans le Cours 2 pour naviguer dans les balises du document HTML.
+   * Pour avoir une disposition de tableau propre, il faut mettre à jour `affichage` de `Equipe` pour qu'il remplisse les cases `<td>...<\td>` de chaque ligne `<tr>`.
 
 5. Codez la fonction `classerEquipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
 
    **Aide** :
 
-   1. Il est possible de trier des tableaux en *Javascript* à l'aide de la méthode `Array.sort(compareFunction)`. Cette fonction prend en argument une *fonction de comparaison* qui prend deux arguments. Elle doit renvoyer un nombre strictement positif si le premier argument doit être trié après le second, un nombre strictement négatif si le premier argument doit être trié avant le second et 0 si l'ordre sur les deux arguments n'a pas d'importance (ou si les deux arguments sont identiques).
+   1. Il est possible de trier des tableaux en *Javascript* à l'aide de la méthode `Array.sort(compareFunction)`. Cette fonction prend en argument une *fonction de comparaison* qui prend deux arguments. Elle doit renvoyer un nombre strictement positif si le premier argument doit être trié après le second, un nombre strictement négatif si le premier argument doit être trié avant le second et 0 si l'ordre sur les deux arguments n'a pas d'importance (ou si les deux arguments sont identiques). ([Documentation sur MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort))
 
       Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction
 
@@ -233,7 +235,7 @@ Une Journee aura comme attributs :
       // t.sort((a, b) => a.age - b.age);
       ```
 
-      Cette instruction modifie le tableau `t` *en place*.
+      Cette instruction modifie le tableau `t` *en place*, c'est-à-dire que cela modifie directement le tableau `t`.
 
    2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
 
@@ -255,16 +257,24 @@ Une Journee aura comme attributs :
     Entrez ensuite dans la console les instructions suivantes :
 
     ```js
-    chp.jouerJournee(1);
+    // Journee 1 non jouée
     chp.classerEquipes();
-    chp.afficher(1);
-    chp.jouerJournee(2);
+    chp.afficherClassement();
+    chp.afficherJournee();
+    // Journee 1 jouée
+    chp.jouerJournee();
+    chp.afficherJournee();
     chp.classerEquipes();
-    chp.afficher(2);
+    chp.afficherClassement();
+    // Journee 2 non jouée
+    chp.numJournee += 1;
+    chp.afficherJournee();
+    // Journee 2 jouée
+    chp.jouerJournee();
+    chp.afficherJournee();
+    chp.classerEquipes();
+    chp.afficherClassement();
     ```
-
-7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.
-
 
 ## EXERCICE 5 - le scénario
 
@@ -275,21 +285,21 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
     - `tabNomEquipes` sert à remplir les input et la liste des équipes engagées avec des valeurs par défaut,
     - `chp` prendra comme valeur un Championnat (plus tard).
 
+1. Nous allons devoir fréquement afficher ou cacher des éléments en fonction des actions de l'utilisateur. Un élément (*i.e.* une balise HTML) sera caché si il a la classe CSS `cache`, ou affiché sinon. *Complétez* les fonctions `afficher()` et `cacher()`.
+
+   Rappel: Utilisez les méthodes `add/remove` de l'attribut `classList` pour ajouter/supprimer des classes.
+
 ### État initial
 
-1. Au début, certains éléments seront en `display : inline`, d’autres en `display :  none`. Tous ces styles sont amenés à passer d’un état à l’autre en fonctions d’événements clic divers, et ceci restera à programmer.
+2. Programmez l’état d’affichage initial suivant :
 
-   Rappel: on peut accéder au `display` d’un élément `elt` par `elt.style.display = "…"`.
-
-   Programmez l’état d’affichage initial suivant :
-
-   + les `bloc-journee` et `bloc-classement` sont en `display : none`.
-   + le `bloc-equipes` doit être en `display : inline`.
+   + Cacher `bloc-journee` et `bloc-classement`.
+   + Afficher `bloc-equipes`.
    + Parmi les enfants du `bloc-equipes` :
-      - la `<div id="equipes-engagees">` sera en `display : inline`.
-      - la `<div id="liste-equipes">` sera en `display : none`.
-   + Dans la balise `legend` du `bloc-equipes`, seule l’image « **plus** » est affichée, l’autre est en `display : none`.
-   + Quand on lancera le championnat, le `bloc-classement` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee-suivante` soit caché, contrairement au bouton `jouer-journee`. Passez donc le `display` de `boutonJouerJournee` à `inline` et celui de `boutonJourneeSuivante` à `none`.
+      - afficher `<div id="equipes-engagees">`.
+      - cacher `<div id="liste-equipes">`.
+   + Dans la balise `legend` du `bloc-equipes`, seule l’image « **plus** » est affichée, l’autre est cachée.
+   + Quand on lancera le championnat, le `bloc-classement` deviendra visible. Il faut donc faire en sorte que dès à présent, le bouton `journee-suivante` soit caché, contrairement au bouton `jouer-journee`.
 
 2. Il faut aussi préremplir les input des noms d’équipes en cohérence avec la liste des équipes engagées par défaut. Autrement dit, il faut remplir ces `input` avec les valeurs du tableau `tabNomEquipes`. Programmez ceci.
 
@@ -299,7 +309,7 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
    Programmez tout ceci et testez en rafraîchissant la page.
 
-   **Astuce :** Plutôt que d'écrire la chaîne de caractère "en dur", vous pouvez l'obtenir facilement à partir de `equipesEngagees`à l'aide de [la méthode `join()` de la classe `Array`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/join).
+   **Astuce :** Plutôt que d'écrire la chaîne de caractère "en dur", vous pouvez l'obtenir facilement à partir de `tabNomEquipes`à l'aide de [la méthode `join()` de la classe `Array`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/join).
 
 
 ### Gestion des événements click
@@ -308,21 +318,21 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
 
    ```js
    boutonPlus.addEventListener("click",function () {
-      boutonPlus.style.display = "none";
-      boutonMoins.style.display = "inline";
-      listeEquipes.style.display = "inline";
-      equipesEngagees.style.display = "none";
+      cacher(boutonPlus);
+      afficher(boutonMoins);
+      afficher(listeEquipes);
+      cacher(equipesEngagees);
    });
    ```
 
-   Dans le code précédent, on affecte à l’attribut `onclick` de `boutonPlus` une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’agir sur le `display` d’éléments. Un code équivalent aurait été :
+   Dans le code précédent, on affecte à l’attribut `onclick` de `boutonPlus` une valeur de type fonction, qui ne porte pas de nom particulier, et dont le contenu permet d’afficher certains éléments. Un code équivalent aurait été :
 
    ```js
    function reactionAuClicPlus() {
-       boutonPlus.style.display = "none";
-       boutonMoins.style.display = "inline";
-       listeEquipes.style.display = "inline";
-       equipesEngagees.style.display = "none";
+      cacher(boutonPlus);
+      afficher(boutonMoins);
+      afficher(listeEquipes);
+      cacher(equipesEngagees);
    }
 
    boutonPlus.addEventListener("click", reactionAuClicPlus);
@@ -354,17 +364,17 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
    + afficher le classement ;
    + actualiser la balise `<legend id="num-journee">` pour que son contenu soit de la forme « journée n°… » (utiliser l’attribut `numJournee`) ;
    + afficher la journée correspondant à `numJournee` (c’est-à-dire afficher les 4 matchs) ;
-   + passer `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none` ;
-   + passer `blocJournee` et `blocClassement` en `display : inline`, `bloc-Equipes` en `display : none` ;
-   + passer `boutonLancer` en `display : none` (pour éviter les relances maladroites du championnat)
+   + afficher `boutonJouerJournee` et cacher `boutonJourneeSuivante` ;
+   + afficher `blocJournee` et `blocClassement`, cacher `bloc-Equipes`;
+   + cacher `boutonLancer` (pour éviter les relances maladroites du championnat)
 
    Essayez de faire tout ça dans une fonction anonyme !
 
 7. Passons à l’action du bouton `jouer-journee`. Celui-ci doit :
 
     + faire jouer la journée d’indice `numJournee` ;
-    + passer `boutonJouerJournee` en `display : none` ;
-    + si `numJournee` est inférieur à 14, passer `boutonJourneeSuivante` en `display : inline` (sinon, le championnat est terminé!) ;
+    + cacher `boutonJouerJournee` ;
+    + si `numJournee` est inférieur à 14, afficher `boutonJourneeSuivante` (sinon, le championnat est terminé!) ;
     + classer les équipes ;
     + afficher le classement.
 
@@ -376,7 +386,7 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
     + augmenter `numJournee` d’une unité ;
     + afficher la journée correspondant à cette nouvelle valeur de `numJournee` ;
     + mettre à jour le contenu de la balise `num-journee` ;
-    + passser `boutonJouerJournee` en `display : inline` et `boutonJourneeSuivante` en `display : none`.
+    + afficher `boutonJouerJournee` et cacher `boutonJourneeSuivante`.
 
    Pareil, fonction anonyme.
 

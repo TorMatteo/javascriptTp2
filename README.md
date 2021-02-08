@@ -236,12 +236,12 @@ Une Journee aura comme attributs :
       Cette instruction modifie le tableau `t` *en place*.
 
    2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
-   3. (Facultatif) `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 
-6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer après tous les fichiers, et qui peut vous aider :
+   3. (Facultatif) `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 
-   ```html
-   <script type="text/javascript">
+6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer dans la console :
+
+   ```js
       let tabEquipes = [new Equipe("PSG"), new Equipe("FCN"), new Equipe("ASM"), new Equipe("RCS"),
                         new Equipe("HAC"), new Equipe("RCL"), new Equipe("TFC"), new Equipe("EAG")];
       // Ou de maniere equivalente
@@ -250,7 +250,6 @@ Une Journee aura comme attributs :
       // (cf documentation de Array.prototype.map sur MDN
       //  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map)
       let chp = new Championnat(tabEquipes);
-   </script>
    ```
 
     Entrez ensuite dans la console les instructions suivantes :

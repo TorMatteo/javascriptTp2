@@ -3,21 +3,22 @@ class Championnat {
     constructor(tabEquipes) {
         this.tabEquipes = tabEquipes;
         this.numJournee = 1;
+        const e = tabEquipes; // Pour raccourcir le nom de variable dans la suite
         this.journees = [
-            new Journee([new Match(eq1, eq2), new Match(eq3, eq4), new Match(eq5, eq6), new Match(eq7, eq8)]), // journée 01
-            new Journee([new Match(eq1, eq3), new Match(eq2, eq4), new Match(eq5, eq7), new Match(eq6, eq8)]), // journée 02
-            new Journee([new Match(eq4, eq1), new Match(eq3, eq2), new Match(eq8, eq5), new Match(eq7, eq6)]), // journée 03
-            new Journee([new Match(eq1, eq5), new Match(eq2, eq6), new Match(eq3, eq7), new Match(eq4, eq8)]), // journée 04
-            new Journee([new Match(eq8, eq1), new Match(eq2, eq7), new Match(eq6, eq3), new Match(eq4, eq5)]), // journée 05
-            new Journee([new Match(eq6, eq1), new Match(eq5, eq2), new Match(eq8, eq3), new Match(eq7, eq4)]), // journée 06
-            new Journee([new Match(eq1, eq7), new Match(eq2, eq8), new Match(eq3, eq5), new Match(eq4, eq6)]), // journée 07
-            new Journee([new Match(eq3, eq1), new Match(eq4, eq2), new Match(eq7, eq5), new Match(eq8, eq6)]), // journée 08
-            new Journee([new Match(eq1, eq4), new Match(eq2, eq3), new Match(eq5, eq8), new Match(eq6, eq7)]), // journée 09
-            new Journee([new Match(eq5, eq1), new Match(eq6, eq2), new Match(eq7, eq3), new Match(eq8, eq4)]), // journée 10
-            new Journee([new Match(eq2, eq1), new Match(eq4, eq3), new Match(eq6, eq5), new Match(eq8, eq7)]), // journée 11
-            new Journee([new Match(eq1, eq8), new Match(eq7, eq2), new Match(eq3, eq6), new Match(eq5, eq4)]), // journée 12
-            new Journee([new Match(eq1, eq6), new Match(eq2, eq5), new Match(eq3, eq8), new Match(eq4, eq7)]), // journée 13
-            new Journee([new Match(eq7, eq1), new Match(eq8, eq2), new Match(eq5, eq3), new Match(eq6, eq4)]), // journée 14
+            new Journee([new Match(e[1], e[2]), new Match(e[3], e[4]), new Match(e[5], e[6]), new Match(e[7], e[8])]), // journée 01
+            new Journee([new Match(e[1], e[3]), new Match(e[2], e[4]), new Match(e[5], e[7]), new Match(e[6], e[8])]), // journée 02
+            new Journee([new Match(e[4], e[1]), new Match(e[3], e[2]), new Match(e[8], e[5]), new Match(e[7], e[6])]), // journée 03
+            new Journee([new Match(e[1], e[5]), new Match(e[2], e[6]), new Match(e[3], e[7]), new Match(e[4], e[8])]), // journée 04
+            new Journee([new Match(e[8], e[1]), new Match(e[2], e[7]), new Match(e[6], e[3]), new Match(e[4], e[5])]), // journée 05
+            new Journee([new Match(e[6], e[1]), new Match(e[5], e[2]), new Match(e[8], e[3]), new Match(e[7], e[4])]), // journée 06
+            new Journee([new Match(e[1], e[7]), new Match(e[2], e[8]), new Match(e[3], e[5]), new Match(e[4], e[6])]), // journée 07
+            new Journee([new Match(e[3], e[1]), new Match(e[4], e[2]), new Match(e[7], e[5]), new Match(e[8], e[6])]), // journée 08
+            new Journee([new Match(e[1], e[4]), new Match(e[2], e[3]), new Match(e[5], e[8]), new Match(e[6], e[7])]), // journée 09
+            new Journee([new Match(e[5], e[1]), new Match(e[6], e[2]), new Match(e[7], e[3]), new Match(e[8], e[4])]), // journée 10
+            new Journee([new Match(e[2], e[1]), new Match(e[4], e[3]), new Match(e[6], e[5]), new Match(e[8], e[7])]), // journée 11
+            new Journee([new Match(e[1], e[8]), new Match(e[7], e[2]), new Match(e[3], e[6]), new Match(e[5], e[4])]), // journée 12
+            new Journee([new Match(e[1], e[6]), new Match(e[2], e[5]), new Match(e[3], e[8]), new Match(e[4], e[7])]), // journée 13
+            new Journee([new Match(e[7], e[1]), new Match(e[8], e[2]), new Match(e[5], e[3]), new Match(e[6], e[4])]), // journée 14
         ]
     }
 

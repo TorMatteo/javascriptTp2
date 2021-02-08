@@ -13,7 +13,7 @@ class Equipe {
      * @param {Equipe} eq1 une équipe du championnat
      * @param {Equipe} eq2 une équipe du championnat
      * @return {Number} une valeur strictement négative si eq2 est devant eq1, une valeur strictement positive si
-     * eq2 est devant eq1, 0 si eq1 === eq2.
+     * eq1 est devant eq2, 0 si eq1 === eq2.
      */
     static compare(eq1, eq2) {
         // à compléter

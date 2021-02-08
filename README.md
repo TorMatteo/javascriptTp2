@@ -210,27 +210,7 @@ Une Journee aura comme attributs :
 
    Analysez ce code et comprenez ce qui est fait. Vous remarquerez en particulier les méthodes sur les tableaux. N’oubliez pas d’insérer le fichier `championnat.js`.
 
-2. Codez la fonction `jouerJournee(i)` qui doit :
-
-   * Faire jouer la journée n°i du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `this`.
-   * Mettre à jour le classement des 8 équipes : on va devoir trier les équipes contenues dans `tabEquipes` pour établir un classement.
-
-     **Aide** :
-
-     1. Il est possible de trier des tableaux en *Javascript* à l'aide de la méthode `Array.sort(compareFunction)`. Cette fonction prend en argument une *fonction de comparaison* qui prend deux arguments. Elle doit renvoyer un nombre strictement positif si le premier argument doit être trié après le second, un nombre strictement négatif si le premier argument doit être trié avant le second et 0 si l'ordre sur les deux arguments n'a pas d'importance (ou si les deux arguments sont identiques).
-
-        Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction
-
-        ```js
-        t.sort(function (a, b) {return (a.age - b.age);});
-        // Ou de manière équivalente
-        // t.sort((a, b) => a.age - b.age);
-        ```
-
-        Cette instruction modifie le tableau `t` *en place*.
-
-     2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
-     3. (Facultatif) `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
+2. Codez la fonction `jouerJournee(i)` qui doit faire jouer la journée n°i du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `this`.
 
 3. Codez la fonction `afficher` qui doit :
 
@@ -238,6 +218,25 @@ Une Journee aura comme attributs :
    2. Afficher le classement. Pour cela, vous remplirez :
       - la `<div>` d’identifiant **titres** qui donne les items de chaque colonne, à savoir : nom, points, G, N, P, buts pour, buts contre et différence (buts pour – buts contre)
       - les `<div>` identifiés "1", "2", …, "8". Chacune de ces div recevra l’affichage de l’équipe dont le classement correspond à l’identifiant de la div.
+
+5. Codez la fonction `classerEquipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
+
+   **Aide** :
+
+   1. Il est possible de trier des tableaux en *Javascript* à l'aide de la méthode `Array.sort(compareFunction)`. Cette fonction prend en argument une *fonction de comparaison* qui prend deux arguments. Elle doit renvoyer un nombre strictement positif si le premier argument doit être trié après le second, un nombre strictement négatif si le premier argument doit être trié avant le second et 0 si l'ordre sur les deux arguments n'a pas d'importance (ou si les deux arguments sont identiques).
+
+      Par exemple, si l'on a un tableau `t` d'objets ayant un attribut `age` et qu'on veut les trier par ordre croissant d'âge, on peut utiliser l'instruction
+
+      ```js
+      t.sort(function (a, b) {return (a.age - b.age);});
+      // Ou de manière équivalente
+      // t.sort((a, b) => a.age - b.age);
+      ```
+
+      Cette instruction modifie le tableau `t` *en place*.
+
+   2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
+   3. (Facultatif) `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
 
 6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer après tous les fichiers, et qui peut vous aider :
 

@@ -256,13 +256,12 @@ Une Journee aura comme attributs :
     Entrez ensuite dans la console les instructions suivantes :
 
     ```js
-    chp.afficherClassement();
-    chp.afficherJournee(1);
     chp.jouerJournee(1);
-    chp.afficherClassement();
-    chp.afficherJournee(2);
+    chp.classerEquipes();
+    chp.afficher(1);
     chp.jouerJournee(2);
-    chp.afficherClassement();
+    chp.classerEquipes();
+    chp.afficher(2);
     ```
 
 7. Il pourrait être agréable d’avoir une disposition de table au niveau de la `<div id="titres">` et des `<div id="1">`, ..., `<div id="8">` pour avoir un bon affichage du classement (voir image plus haut). Si vous avez le temps, c’est le moment. C’est possible en incluant « brutalement » les balises adéquates au niveau des divers `innerHTML` rencontrés.

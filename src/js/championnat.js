@@ -33,4 +33,8 @@ class Championnat {
         // à compléter
     }
 
+    classerEquipes() {
+        // à compléter
+    }
+
 }

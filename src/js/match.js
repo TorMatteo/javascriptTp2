@@ -8,10 +8,6 @@ class Match {
         // à compléter
     }
 
-    majEquipes() {
-        // à compléter
-    }
-
     affichage() {
         // à compléter
     }

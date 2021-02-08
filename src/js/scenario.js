@@ -7,6 +7,7 @@ const boutonJouerJournee = document.getElementById('jouer-journee');
 const blocEquipes = document.getElementById('bloc-equipes');
 const blocJournee = document.getElementById('bloc-journee');
 const blocClassement = document.getElementById('bloc-classement');
+const numJournee = document.getElementById('num-journee');
 const boutonPlus = document.getElementById('plus');
 const boutonMoins = document.getElementById('moins');
 

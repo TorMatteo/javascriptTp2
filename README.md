@@ -97,7 +97,7 @@ Une Equipe aura comme attributs :
 
    Testez cette fonction en créant plusieurs équipes et en modifiant « à la main » les valeurs de leurs attributs (dans la console).
 
-   **Dépannage :** Si vous bloquez sur la fonction `compare`, vous pouvez tricher en définissant un score pour chaque équipe `score = points * 10000 + differenceButs * 100 + nbButsPour + seed`, et en comparant le score des 2 équipes.
+   **Dépannage :** Si vous bloquez sur la fonction `compare`, vous pouvez tricher en définissant un score pour chaque équipe `score = points * 10000 + differenceButs * 100 + nbButsPour + nbAlea`, et en comparant le score des 2 équipes.
 
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 

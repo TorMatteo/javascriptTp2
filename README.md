@@ -133,7 +133,7 @@ Une Equipe aura comme attributs :
 
 8. (Bonus) Comme le nombre de points se déduit des autres attributs, il est plus sage qu'il ne soit pas stocké comme attribut. En effet, on veut éviter qu'un bout de code de `equipe.js` calcule mal ce nombre de points, ce qui affecterait le reste de la classe. **Changez** donc votre code pour remplacer cet attribut par une fonction `nbPoints()` et mettez à jour le reste de votre code.
 
-   De même, comme vous avez utilisé plusieures fois la différence de buts d'une équipe, il serait de bon aloi d'en faire une méthode.
+   De même, comme vous avez utilisé plusieurs fois la différence de buts d'une équipe, il serait de bon aloi d'en faire une méthode.
 
 ## EXERCICE 2 - l'objet Match
 

@@ -83,7 +83,9 @@ Une Equipe aura comme attributs :
 
 2. Ajoutez le script `equipe.js` au fichier `championnat.html` en ajoutant la ligne suivante dans la balise `<head>` :
 
-        <script defer type="text/javascript" src="js/equipe.js"></script>
+   ```html
+   <script defer type="text/javascript" src="js/equipe.js"></script>
+   ```
 
 3. actualisez la page `championnat.html` et testez le constructeur dans la console, par exemple en créant une nouvelle équipe par une instruction comme
 

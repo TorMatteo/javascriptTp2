@@ -93,13 +93,22 @@ Une Equipe aura comme attributs :
 
    puis affichez `eq1` dans la console (`eq1` et `Entrée`). Vous pouvez « déplier » l’objet créé et examiner ce qui s’affiche.
 
-4. Codez la fonction `static compare(eq1, eq2)` qui compare deux équipes selon les critères du classement. La fonction doit renvoyer un nombre strictement positif si l'équipe `eq2` est devant l'équipe `eq1`, un nombre strictement négatif si `eq1` est devant `eq2` et 0 si `eq1 === eq2`.
+4. Codez la fonction `static compare(eq1, eq2)` qui compare deux équipes selon les critères du classement. Pour comparer le classement de deux équipes, on compare :
+   * d'abord leur nombre de points,
+   * puis en cas d'égalité la différence de buts,
+   * puis en cas d'égalité le nombre de buts marqués,
+   * puis en cas d'égalité la différence de buts,
+   * puis finalement en cas d'égalité la valeur aléatoire.
+   
+   Par convention des fonctions de comparaison en JavaScript, la fonction `compare` doit renvoyer un nombre tel que :
 
-   Cette fonction doit commencer par essayer de comparer les équipes selon leur nombre de points au classement, puis en cas d'égalité selon leur différence de buts, puis selon le nombre de buts marqués en cas d'égalité sur la différence de buts puis finalement selon leur valeur aléatoire en cas d'égalité de tous les autres critères.
+   * `compare(eq1, eq2) > 0 <=> eq1 > eq2` où l'ordre entre les équipes est celui du classement ;
+   * `compare(eq1, eq2) = 0 <=> eq1 = eq2` ;
+   * `compare(eq1, eq2) < 0 <=> eq1 < eq2` ;
 
-   Testez cette fonction en créant plusieurs équipes et en modifiant « à la main » les valeurs de leurs attributs (dans la console).
-
-   **Dépannage :** Si vous bloquez sur la fonction `compare`, vous pouvez tricher en définissant un score pour chaque équipe `score = points * 10000 + differenceButs * 100 + nbButsPour + nbAlea`, et en comparant le score des 2 équipes.
+   **Exemple :** Imaginons une fonction qui compare l'âge de 2 personnes : elle pourrait alors avoir le code `function compare (a,b) { return a.age - b.age; }`.
+   
+   **Dépannage :** Si vous bloquez sur la fonction `compare`, vous pouvez tricher en définissant un score pour chaque équipe `score = points * 10000 + differenceButs * 100 + nbButsPour + nbAlea`, et en comparant uniquement le score des 2 équipes.
 
 5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 
@@ -241,7 +250,7 @@ Une Journee aura comme attributs :
 
    2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
 
-   3. (Facultatif) `t.indexOf(val)` retourne l’indice de `val` dans le tableau `t`.
+   3. La fonction `sort` trie par ordre croissant de classement. Si vous auriez voulu qu'elle trie par ordre décroissant, vous pouvez appliquer [`reverse()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reverse) qui renversera *en place* votre tableau.
 
 6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer dans la console :
 

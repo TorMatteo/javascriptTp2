@@ -19,7 +19,7 @@ class Equipe {
         // à compléter
     }
 
-    affichage() {
+    toString() {
         // à compléter
     }
 

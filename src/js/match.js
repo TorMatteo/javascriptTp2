@@ -8,7 +8,7 @@ class Match {
         // à compléter
     }
 
-    affichage() {
+    toString() {
         // à compléter
     }
 

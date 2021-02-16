@@ -89,7 +89,9 @@ Une Equipe aura comme attributs :
 
 3. actualisez la page `championnat.html` et testez le constructeur dans la console, par exemple en créant une nouvelle équipe par une instruction comme
 
-        eq1 = new Equipe("PSG");
+   ```js
+   let eq1 = new Equipe("OL");
+   ```
 
    puis affichez `eq1` dans la console (`eq1` et `Entrée`). Vous pouvez « déplier » l’objet créé et examiner ce qui s’affiche.
 
@@ -107,14 +109,26 @@ Une Equipe aura comme attributs :
    * `compare(eq1, eq2) < 0 <=> eq1 < eq2` ;
 
    **Exemple :** Imaginons une fonction qui compare l'âge de 2 personnes : elle pourrait alors avoir le code `function compare (a,b) { return a.age - b.age; }`.
-   
+
    **Dépannage :** Si vous bloquez sur la fonction `compare`, vous pouvez tricher en définissant un score pour chaque équipe `score = points * 10000 + differenceButs * 100 + nbButsPour + nbAlea`, et en comparant uniquement le score des 2 équipes.
 
-5. Codez la fonction `affichage()`, équivalent d’un `toString()` et qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
+5. Codez la fonction `toString()` qui donnera le résumé de l’état actuel de l’équipe. Ci-dessous une succession de commandes lancées dans la console, dont l’affichage final :
 
-   <p align="center">
+   ```js
+   let eq1 = new Equipe("OL");
+   eq1.nbMatchsGagnes = 6;
+   eq1.nbMatchsNuls = 3;
+   eq1.nbMatchsPerdus = 2;
+   eq1.nbButsPour = 17;
+   eq1.nbButsContre = 8;
+   eq1.points = 21;
+   eq1.toString();
+   // "1   OL  21  6   3   2   17  8  9"
+   ```
+
+<!--    <p align="center">
        <img src="ressources/aff.png" width="80%">
-   </p>
+   </p> -->
 
    Le numéro 1 devant le nom de l’équipe est son classement.
 
@@ -128,19 +142,28 @@ Une Equipe aura comme attributs :
 
 7. Testez cette nouvelle fonction à partir de `eq1` qui a certaines valeurs d’attributs suite à vos différentes manœuvres. Par exemple, pour continuer le précédent écran :
 
-   <p align="center">
+   ```js
+   eq1.toString();
+   // "1   OL  21  6   3   2   17  8  9"
+   eq1.miseAJour(3, 1);
+   eq1.toString();
+   // "1   OL  24  7   3   2   20  9  11"
+   ```
+
+<!--    <p align="center">
        <img src="ressources/aff3.png" width="80%">
    </p>
+ -->
 
    Remarque : il peut être utile, puisque nous rafraîchissons régulièrement la page, de sauvegarder les commandes à insérer dans la console dans un script, inséré après `equipe.js`, en bas de `championnat.html` et dont le code pourrait être :
 
    ```js
-    eq1 = new Equipe("PSG");
+    let eq1 = new Equipe("OL");
     eq1.nbMatchsGagnes = 6;
     eq1.nbMatchsNuls = 3;
     eq1.nbMatchsPerdus = 2;
     ...
-    ```
+   ```
 
 8. (Bonus) Comme le nombre de points se déduit des autres attributs, il est plus sage qu'il ne soit pas stocké comme attribut. En effet, on veut éviter qu'un bout de code de `equipe.js` calcule mal ce nombre de points, ce qui affecterait le reste de la classe. **Changez** donc votre code pour remplacer cet attribut par une fonction `nbPoints()` et mettez à jour le reste de votre code.
 
@@ -163,30 +186,39 @@ Un Match aura comme attributs :
 
 3. Testez votre constructeur en créant deux équipes, puis un match entre ces deux équipes. Exemple de test :
 
-   <p align="center">
+   ```js
+   let eq1 = new Equipe("OL");
+   let eq2 = new Equipe("ASSE");
+   let match = new Match(eq1, eq2);
+   ```
+
+<!--    <p align="center">
        <img src="ressources/aff4.png" width="80%">
-   </p>
+   </p> -->
 
 4. Codez la fonction `jouer()` qui :
    * met à jour `estJoue` ;
-   * donne des valeurs aléatoirement à `this.nbButs1` et à `this.nbButs2` : En général, même s’il y a bien des exceptions,
-     une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre.
-
+   * donne des valeurs aléatoirement à `eq1.nbButs1` et à `eq1.nbButs2` : En général, même s’il y a bien des exceptions,
+     une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre.  
      Remarques :
-
      + `Math.floor(…)` renvoie la partie entière
      + `Math.floor(Math.random()*5)` donne un entier entre 0 et 4.
-
-   * met à jour les attributs des deux équipes du match, à partir des valeurs de `this.nbButs1` et de `this.nbButs2`.
-
+   * met à jour les attributs des deux équipes du match, à partir des valeurs de `eq1.nbButs1` et de `eq1.nbButs2`.  
      Conseil : réutilisez la méthode `miseAJour` de `Equipe`.
 
 
-6. Codez enfin la fonction `affichage()` qui sera le `toString()` du match et qui produira quelque chose comme ça :
+6. Codez enfin la fonction `toString()` qui produira quelque chose comme ça :
 
-   <p align="center">
+   ```js
+   let match = new Match(eq1, eq2);
+   match.jouer();
+   match.affichage();
+   // "OL   5 - 0   ASSE"
+   ```
+
+<!--    <p align="center">
        <img src="ressources/aff5.png" width="80%">
-   </p>
+   </p> -->
 
 ## EXERCICE 3 - l'objet Journee
 
@@ -221,7 +253,7 @@ Une Journee aura comme attributs :
 
    Analysez ce code et comprenez ce qui est fait. Vous remarquerez en particulier les méthodes sur les tableaux. N’oubliez pas d’insérer le fichier `championnat.js`.
 
-2. Codez la fonction `jouerJournee()` qui doit faire jouer la journée courante `numJournee` du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `this`.
+2. Codez la fonction `jouerJournee()` qui doit faire jouer la journée courante `numJournee` du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `eq1`.
 
 3. Codez la fonction `afficherJournee()` qui doit afficher la journée courante `numJournee` du planning. Même remarque que pour la question précédente.
 
@@ -230,7 +262,7 @@ Une Journee aura comme attributs :
    Remarque :
 
    * Servez-vous de la méthode `querySelectorAll` (ou `querySelector` et `children`) vue dans le Cours 2 pour naviguer dans les balises du document HTML.
-   * Pour avoir une disposition de tableau propre, il faut mettre à jour `affichage` de `Equipe` pour qu'il remplisse les cases `<td>...<\td>` de chaque ligne `<tr>`.
+   * Pour avoir une disposition de tableau propre, il faut mettre à jour `toString()` de `Equipe` pour qu'il remplisse les cases `<td>...<\td>` de chaque ligne `<tr>`.
 
 5. Codez la fonction `classerEquipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
 

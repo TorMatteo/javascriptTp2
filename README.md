@@ -252,7 +252,7 @@ Une Journee aura comme attributs :
 
    Analysez ce code et comprenez ce qui est fait. Vous remarquerez en particulier les méthodes sur les tableaux. N’oubliez pas d’insérer le fichier `championnat.js`.
 
-2. Codez la fonction `jouerJournee()` qui doit faire jouer la journée courante `numJournee` du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `eq1`.
+2. Codez la fonction `jouerJournee()` qui doit faire jouer la journée courante `numJournee` du planning : attention, la journée n°1 du planning correspond à l’élément d’indice 0 du tableau `journees` de `Championnat`.
 
 3. Codez la fonction `afficherJournee()` qui doit afficher la journée courante `numJournee` du planning. Même remarque que pour la question précédente.
 

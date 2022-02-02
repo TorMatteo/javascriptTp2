@@ -99,7 +99,6 @@ Une Equipe aura comme attributs :
    * d'abord leur nombre de points,
    * puis en cas d'égalité la différence de buts,
    * puis en cas d'égalité le nombre de buts marqués,
-   * puis en cas d'égalité la différence de buts,
    * puis finalement en cas d'égalité la valeur aléatoire.
    
    Par convention des fonctions de comparaison en JavaScript, la fonction `compare` doit renvoyer un nombre tel que :

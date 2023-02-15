@@ -127,10 +127,6 @@ Une `Equipe` aura comme attributs :
    // "1   OL  21  6   3   2   17  8  9"
    ```
 
-<!--    <p align="center">
-       <img src="ressources/aff.png" width="80%">
-   </p> -->
-
    Le numéro 1 devant le nom de l’équipe est son classement.
 
    Pour le moment, ce n'est pas important, mais vous pourrez, **plus tard**, styliser un peu mieux cet affichage pour que les affichages des huit équipes donnent un rendu de tableau, comme ci-dessous :
@@ -194,7 +190,7 @@ Un `Match` aura comme attributs :
 
 4. Codez la fonction `jouer()` qui :
    * met à jour `estJoue` ;
-   * donne des valeurs aléatoirement à `eq1.nbButs1` et à `eq1.nbButs2` : En général, même s’il y a bien des exceptions,
+   * donne des valeurs aléatoirement à `nbButs1` et à `nbButs2` : En général,
      une équipe qui joue à domicile est légèrement favorisée. À vous de le mettre en œuvre.  
      Remarques :
      + `Math.floor(…)` renvoie la partie entière
@@ -203,7 +199,7 @@ Un `Match` aura comme attributs :
      Conseil : réutilisez la méthode `miseAJour` de `Equipe`.
 
 
-6. Codez enfin la fonction `toString()` qui produira quelque chose comme ça :
+5. Codez enfin la fonction `toString()` qui produira quelque chose comme ça :
 
    ```js
    let match = new Match(eq1, eq2);
@@ -243,7 +239,7 @@ Une `Journee` aura comme attributs :
 ## EXERCICE 4 - l’objet `Championnat`
 
 1. Le constructeur de `Championnat` vous est fourni. Un objet `Championnat` a trois attributs :
-   - un tableau d’équipes nommé `tabEquipes` ;
+   - un tableau d’équipes nommé `tabEquipes`, qui sera ordonné selon le classement ;
    - un entier `numJournee` qui dit quelle est la journée active ;
    - un tableau `journees` contenant les 14 journées du planning.
 
@@ -253,14 +249,7 @@ Une `Journee` aura comme attributs :
 
 3. Codez la fonction `afficherJournee()` qui doit afficher la journée courante `numJournee` du planning. Même remarque que pour la question précédente.
 
-4. Codez la fonction `afficherClassement()` qui remplira les huit `<tr>` du `<tbody>` dans `<fieldset id="bloc-classement">`. La n-ième ligne `<tr>` recevra l’affichage de l’équipe qui est classée n-ième.
-
-   Remarque :
-
-   * Servez-vous de la méthode `querySelectorAll` (ou `querySelector` et `children`) vue dans le Cours 2 pour naviguer dans les balises du document *HTML*.
-   * Pour avoir une disposition de tableau propre, il faut mettre à jour `toString()` de `Equipe` pour qu'il remplisse les cases `<td>...<\td>` de chaque ligne `<tr>`.
-
-5. Codez la fonction `classerEquipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
+4. Codez la fonction `classerEquipes()`. Sa mission est de mettre à jour l’attribut classement des 8 équipes après avoir calculé leur évaluation.
 
    **Aide** :
 
@@ -279,6 +268,14 @@ Une `Journee` aura comme attributs :
    2. Comme la fonction `compare` de `Equipe` est statique, on l'appelle avec `Equipe.compare(eq1,eq2)`.
 
    3. La fonction `sort` trie par ordre croissant de classement. Si vous avez voulu qu'elle trie par ordre décroissant, vous pouvez appliquer [`reverse()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reverse) qui renversera *en place* votre tableau.
+
+5. Codez la fonction `afficherClassement()` qui remplira les huit `<tr>` du `<tbody>` dans `<fieldset id="bloc-classement">`. La n-ième ligne `<tr>` recevra l’affichage de l’équipe qui est classée n-ième.
+
+   Remarque :
+
+   * Servez-vous de la méthode `querySelectorAll` (ou `querySelector` et `children`) vue dans le Cours 2 pour naviguer dans les balises du document *HTML*.
+   * Pour avoir une disposition de tableau propre, il faut mettre à jour `toString()` de `Equipe` pour qu'il remplisse les cases `<td>...<\td>` de chaque ligne `<tr>`.
+
 
 6. Il serait bon, de nouveau, de tester tout ça dans la console. Voici un exemple de code à insérer dans la console :
 

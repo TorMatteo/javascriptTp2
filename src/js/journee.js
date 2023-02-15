@@ -1,5 +1,9 @@
 class Journee {
 
+    /**
+     * 
+     * @param {Match[]} matchs 
+     */
     constructor(matchs) {
         // à compléter
     }

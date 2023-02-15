@@ -1,5 +1,9 @@
 class Championnat {
-
+    
+    /**
+     * 
+     * @param {Equipe[]} tabEquipes 
+     */
     constructor(tabEquipes) {
         this.tabEquipes = tabEquipes;
         this.numJournee = 1;

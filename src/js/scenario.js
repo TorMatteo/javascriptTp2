@@ -14,7 +14,9 @@ const boutonMoins = document.getElementById('moins');
 // la variable tableau des nom des équipes par défaut
 let tabNomEquipes = ["PSG", "ASM", "OM", "ASSE", "OL", "FCN", "EAG", "RCS"];
 
-// la variable Championnat
+/** La variable Championnat
+ * @type {Championnat} chp
+ */
 let chp;
 
 // Fonctions utiles

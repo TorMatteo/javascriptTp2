@@ -2,7 +2,7 @@
 lang: fr
 ---
 
-# ![](ressources/logo.jpeg) Prog web client riche - JavaScript
+# ![](ressources/logo.jpeg) R.4.01 Développement Web - JavaScript
 
 ### IUT Montpellier-Sète – Département Informatique
 

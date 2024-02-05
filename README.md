@@ -147,6 +147,8 @@ Une `Equipe` aura comme attributs :
    // "1   OL  24  7   3   2   20  9  11"
    ```
 
+   <!--    
+   
    Remarque : il peut être utile, puisque nous rafraîchissons régulièrement la page, de sauvegarder les commandes à insérer dans la console dans un script, inséré après `equipe.js`, en bas de `championnat.html` et dont le code pourrait être :
 
    ```js
@@ -155,7 +157,9 @@ Une `Equipe` aura comme attributs :
     eq1.nbMatchsNuls = 3;
     eq1.nbMatchsPerdus = 2;
     ...
-   ```
+   ``` 
+   
+   -->
 
 8. (Bonus) Comme le nombre de points se déduit des autres attributs, il est plus sage qu'il ne soit pas stocké comme attribut. En effet, on veut éviter qu'un bout de code de `equipe.js` calcule mal ce nombre de points, ce qui affecterait le reste de la classe. **Changez** donc votre code pour remplacer cet attribut par une fonction `nbPoints()` et mettez à jour le reste de votre code.
 
@@ -165,8 +169,8 @@ Une `Equipe` aura comme attributs :
 
 Un `Match` aura comme attributs :
 
-- son équipe 1 notée `equipe1` ;
-- son équipe 2 notée `equipe2` ;
+- l'équipe qui joue à domicile, notée `equipe1` ;
+- l'équipe qui joue à l'extérieur, notée `equipe2` ;
 - le nombre de buts marqués par `eq1`, qui sera noté `nbButs1` ;
 - le nombre de buts marqués par `eq2`, qui sera noté `nbButs2` ;
 - un booléen `estJoue` qui dit si le match a été joué ou non.
@@ -427,3 +431,11 @@ Et maintenant, le scénario du déroulement du jeu. Vous pouvez supprimer les in
    Pareil, fonction anonyme.
 
    Actualisez tout ça, et jouez !
+
+## EXERCICE 6 - Bonus - Et pour quelques minutes de plus
+
+1. Rajouter les méthodes `cacher` et `afficher` dans le prototype de HTMLElement
+2. Améliorer le fonctionnement des boutons `+` et `-` :
+   * Le bouton `LancerChampionnat` doit lancer un clic sur le `boutonMoins`
+   * Il faut cacher les `boutonPlus`/`boutonMoins` une fois que le championnat est lancé
+3. Allez lire la documentation des méthodes `Array.forEach` et `Array.map`. Servez-vous en pour simplier votre code, notamment dans l'affichage d'une ligne `Equipe` du tableau de classement

@@ -2,10 +2,10 @@ class Match {
 
     /**
      * 
-     * @param {Equipe} equipe1 
-     * @param {Equipe} equipe2 
+     * @param {Equipe} equipeDomicile 
+     * @param {Equipe} equipeExterieur 
      */
-    constructor(equipe1, equipe2) {
+    constructor(equipeDomicile, equipeExterieur) {
         // à compléter
     }
 

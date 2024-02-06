@@ -1,7 +1,15 @@
 class Equipe {
 
     constructor(nom) {
-        // à compléter
+        this.nom = nom;
+        this.classement = 1;
+        this.points = 0;
+        this.nbMatchsGagnes = 0;
+        this.nbMatchsNuls = 0;
+        this.nbMatchsPerdus = 0;
+        this.nbButsPour = 0;
+        this.nbButsContre = 0;
+        this.nbAleatoire = Math.random();
     }
 
     /**
@@ -16,15 +24,42 @@ class Equipe {
      * eq1 est devant eq2, 0 si eq1 === eq2.
      */
     static compare(eq1, eq2) {
-        // à compléter
+        if (eq1.points === eq2.points) {
+            if ((eq1.nbButsPour - eq1.nbButsContre) === (eq2.nbButsPour - eq2.nbButsContre)) {
+                if (eq1.nbButsPour === eq2.nbButsPour) {
+                    return eq1.nbAleatoire - eq2.nbAleatoire;
+                } else {
+                    return eq1.nbButsPour - eq2.nbButsPour;
+                }
+            } else {
+                return (eq1.nbButsPour - eq1.nbButsContre) - (eq2.nbButsPour - eq2.nbButsContre);
+            }
+        } else {
+            return eq1.points - eq2.points;
+        }
     }
 
     toString() {
-        // à compléter
+        return  this.classement+" "+this.nom+" "+this.points+" "+this.nbMatchsGagnes+" "+this.nbMatchsNuls+" "+this.nbMatchsPerdus+" "+this.nbButsPour+" "+this.nbButsContre+" "+(this.nbButsPour - this.nbButsContre);
     }
 
     miseAJour(nbButsMarques, nbButsEncaisses) {
-        // à compléter
+        this.nbButsContre += nbButsEncaisses;
+        this.nbButsPour += nbButsMarques;
+        if(nbButsMarques > nbButsEncaisses){
+            this.nbMatchsGagnes += 1;
+            this.points += 3;
+        }else if (nbButsMarques < nbButsEncaisses){
+            this.nbMatchsPerdus += 1;
+
+        }else{
+            this.nbMatchsNuls += 1;
+            this.points+= 1;
+        }
+    }
+
+    toHTML(){
+        return "<td>" + this.classement + "</td><td>" + this.nom + "</td><td>" + this.points + "</td><td>" + this.nbMatchsGagnes + "</td><td>" + this.nbMatchsNuls + "</td><td>" + this.nbMatchsPerdus + "</td><td>" +  this.nbButsPour + "</td><td>" + this.nbButsContre + "</td><td>" +this.nbButsPour - this.nbButsContre + "</td>";
     }
 
 }

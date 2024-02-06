@@ -1,3 +1,4 @@
+
 class Championnat {
     
     /**
@@ -27,19 +28,25 @@ class Championnat {
     }
 
     jouerJournee() {
-        // à compléter
+        this.journees[this.numJournee-1].jouer();
     }
 
     afficherJournee() {
-        // à compléter
+        this.journees[this.numJournee-1].afficher();
+        //this.numJournee++;
     }
 
     afficherClassement() {
-        // à compléter
+
+        let tr = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr")
+        for(let i = 0 ; i < 8 ; i++){
+            tr[i].innerHTML = this.tabEquipes[i].toHTML();
+        }
+
     }
 
     classerEquipes() {
-        // à compléter
+        this.tabEquipes.sort(Equipe.compare).reverse();
     }
 
 }

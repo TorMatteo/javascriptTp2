@@ -5,15 +5,22 @@ class Journee {
      * @param {Match[]} matchs 
      */
     constructor(matchs) {
-        // à compléter
+        this.matchs = matchs;
+        this.estJouee = false
     }
 
     afficher() {
-        // à compléter
+        for(let i = 0 ; i < 4 ; i++){
+            const div = document.getElementById("match"+(i+1));
+            div.innerHTML = this.matchs[i].toString();
+        }
     }
 
     jouer() {
-        // à compléter
+        this.estJouee = true;
+        for(let i = 0 ; i < 4 ; i++){
+            this.matchs[i].jouer()
+        }
     }
 
 }

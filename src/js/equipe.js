@@ -59,7 +59,7 @@ class Equipe {
     }
 
     toHTML(){
-        return "<td>" + this.classement + "</td><td>" + this.nom + "</td><td>" + this.points + "</td><td>" + this.nbMatchsGagnes + "</td><td>" + this.nbMatchsNuls + "</td><td>" + this.nbMatchsPerdus + "</td><td>" +  this.nbButsPour + "</td><td>" + this.nbButsContre + "</td><td>" +this.nbButsPour - this.nbButsContre + "</td>";
+        return "<td>" + this.classement + "</td><td>" + this.nom + "</td><td>" + this.points + "</td><td>" + this.nbMatchsGagnes + "</td><td>" + this.nbMatchsNuls + "</td><td>" + this.nbMatchsPerdus + "</td><td>" +  this.nbButsPour + "</td><td>" + this.nbButsContre + "</td><td>" +(this.nbButsPour - this.nbButsContre)+ "</td>";
     }
 
 }
